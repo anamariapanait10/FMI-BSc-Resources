@@ -1,4 +1,4 @@
-# FMI resources - 2022-2024
+# FMI resources - 2021-2024
 
 In this repository you can find homework, projects, exams and various 
 other useful resources for Computer Science students at the University of Bucharest. :duck:
@@ -32,7 +32,7 @@ other useful resources for Computer Science students at the University of Buchar
 | Competențe specifice într-o limbă străină        |    2    |
 | Educație fizică                                  |    2    |
 
-### Second year
+### Second year 2022-2023
 #### First semester
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -55,7 +55,7 @@ other useful resources for Computer Science students at the University of Buchar
 | Programare avansată pe obiecte                   |    4    |
 | Competențe avansate într-o limbă străină II      |    2    |
 
-### Third year
+### Third year 2023-2024
 #### First semester
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
