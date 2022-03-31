@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1648644042 source:c:\users\ana\desktop\fmi\year i\sem 2\programare orientata pe obiecte\laborator\poo tema1\main.cpp
+	<iostream>
+	<string.h>
+	<math.h>
+

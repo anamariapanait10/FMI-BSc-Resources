@@ -1,0 +1,10 @@
+oracle.external.aqb,12.2.0,../external/oracle.external.aqb.jar,4,false
+oracle.external.awxml,12.2.0,../external/oracle.external.awxml.jar,4,false
+oracle.external.olap_api,12.2.0,../external/oracle.external.olap_api.jar,4,false
+oracle.external.rsyntaxtextarea,12.2.0,../external/oracle.external.rsyntaxtextarea.jar,4,false
+oracle.external.js,12.2.0,../external/oracle.external.js.jar,4,false
+oracle.external.pdfbox,12.2.0,../external/oracle.external.pdfbox.jar,4,false
+oracle.external.commons-io,12.2.0,../external/oracle.external.commons-io.jar,4,false
+oracle.external.xmlgraphics-commons,12.2.0,../external/oracle.external.xmlgraphics-commons.jar,4,false
+oracle.datamodeler,12.2.0,../sqldeveloper/extensions/oracle.datamodeler.jar,4,false
+

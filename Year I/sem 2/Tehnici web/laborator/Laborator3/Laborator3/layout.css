@@ -1,0 +1,416 @@
+
+@media screen and (min-width:600px){
+    .stil{
+        background-color: brown;
+    }
+
+    header{
+        background-color: aquamarine;
+        height: 70px;
+        padding-left:10px;
+        padding-top: 10px;
+    }
+    
+    *{
+        margin:0;
+        padding: 0;
+    }
+    
+    @keyframes deplasare{
+        0%{right:0%;}
+        100%{right:90%;}
+    }
+    @keyframes aparitie{
+        0%{opacity: 0;}
+        50%{opacity: 0.5;}
+        100%{opacity: 1;}
+    }
+
+    #carte {
+        position:fixed;
+        right: 0;
+        top:0;
+        height: 70px;
+        transition: transform 0.5s;
+        animation-name:deplasare;
+        animation-duration: 7s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    #hamburger{
+        display: none;
+    }
+    header img:hover{
+        transform: rotate(360deg) scale(0.75);
+        animation-play-state: paused;
+    }
+    nav{
+        height: 70px;
+        background-color:lightskyblue;
+    }
+    
+    
+    ul.meniu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        border: solid;
+    }
+    ul.meniu li {
+        border:solid;
+        flex-grow: 20;
+        background-color: aqua;
+    }
+    ul.submeniu {
+        visibility: hidden;
+    }
+    ul.meniu > li:hover > ul.submeniu{
+        visibility: visible;
+        width: 100%;
+        background-color:aquamarine;
+        position:relative;
+        z-index:60;
+    }
+    
+    
+    ul.meniu, ul.submeniu {
+    list-style-type:none;
+    }
+    ul.meniu a {
+    transition: background-color 0.5s, color 0.5s;
+    text-decoration:none;
+    color:black;
+    display: block;
+    width: 100%;
+    }
+    ul.meniu a:hover{
+        background-color: white;
+        color:darkcyan;
+    }
+    ul.meniu > li {
+    flex-grow: 1;
+    height:70px;
+    border:1px solid black;
+    text-align:center;
+    line-height:70px;
+    }
+    #container-poze{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #container-poze > figure{
+        margin: 0;
+        padding: 0;
+        width: 30%;
+        text-align: center;
+        opacity:0;
+        animation-name:aparitie;
+        animation-duration:5s;
+        animation-fill-mode: forwards;
+    }
+    #container-poze > figure:nth-child(1){
+        animation-delay:1s;
+    }
+    #container-poze > figure:nth-child(2){
+        animation-delay:2s;
+    }
+    #container-poze > figure:nth-child(3){
+        animation-delay:3s;
+    }
+    #container-poze > figure:nth-child(4){
+        animation-delay:4s;
+    }
+    #container-poze > figure:nth-child(5){
+        animation-delay:5s;
+    }
+    #container-poze > figure:nth-child(6){
+        animation-delay:6s;
+    }
+    #container-poze > figure:nth-child(7){
+        animation-delay:7s;
+    }
+    #container-poze > figure:nth-child(8){
+        animation-delay:8s;
+    }
+    #container-poze > figure:nth-child(9){
+        animation-delay:9s;
+    }
+    
+    #container-pagina{
+        display:grid;
+    
+        grid-gap:10px;
+        grid-template-areas:"home home home home home"
+                            "anunturi anunturi noutati noutati noutati"
+                            "orar orar noutati noutati noutati"
+                            "galerie galerie galerie galerie galerie"
+    }
+    #container-articol{
+        display: flex;
+    }
+    #home{
+        border:solid;
+        padding:10px;
+        grid-area:home;
+    }
+    #home p{
+        transition: backgrund-color 0.5s, color 0.5s, font-size 0.5s;
+    }
+    #home p:hover{
+        background-color: blueviolet;
+        font-size: larger;
+    }
+    #anunturi{
+        border:solid;
+        padding:10px;
+        grid-area: anunturi;
+    }
+    #orar{
+        border:solid;
+        padding:10px;
+        grid-area: orar;
+    }
+    #noutati{
+        border:solid;
+        padding:20px;
+        grid-area: noutati;
+    }
+    #galerie{
+        border:solid;
+        padding:10px;
+        grid-area: galerie;
+    }
+    #noutati img[alt="Matilda de R.D"]{
+        float: left;
+        margin-right: 20px;
+    }
+    #noutati img[alt="Matilda de R.D"]:hover{
+        transform: skew(20deg);
+    }
+    #noutati img[alt="Little Women"]{
+        float: right;
+        margin-left: 20px;
+    }
+    body{
+        margin:0;
+        padding:0;
+    }
+    body > input{
+        display: none;
+        position: absolute;
+        top:20px;
+        left:10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:600px){
+    header{
+        background-color: aquamarine;
+        height: 70px;
+        width: 100%;
+        padding-left:10px;
+        padding-top: 10px;
+    }
+    
+    *{
+        margin:0;
+        padding: 0;
+    }
+    
+    @keyframes deplasare{
+        0%{right:0%;}
+        100%{right:90%;}
+    }
+    @keyframes aparitie{
+        0%{opacity: 0;}
+        50%{opacity: 0.5;}
+        100%{opacity: 1;}
+    }
+    #carte {
+        display: none;  
+    }
+    #hamburger{
+        display: block;
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: absolute;
+        top:10px;
+        left:10px;
+    }
+
+    header > h1 {
+        text-align: center;
+    }
+    header img:hover{
+        transform: rotate(360deg) scale(0.75);
+        animation-play-state: paused;
+    }
+    nav{
+        background-color:lightskyblue;
+        display: none;
+    }
+    
+    ul.meniu{
+        border: solid;
+    }
+    ul.meniu li {
+        border:solid;
+        background-color: aqua;
+    }
+    ul.submeniu {
+        display: none;
+    }
+    ul.submeniu > li {
+        background-color: blueviolet;
+    }
+
+    ul.meniu > li:hover > ul.submeniu{
+        width: 100%;
+        background-color:aquamarine;
+        display: block;
+    }
+    
+    ul.meniu, ul.submeniu {
+    list-style-type:none;
+    }
+    ul.meniu a {
+        transition: background-color 0.5s, color 0.5s;
+        text-decoration:none;
+        color:black;
+        display: block;
+        width: 100%;
+    }
+    ul.meniu a:hover{
+        background-color: white;
+        color:darkcyan;
+    }
+    ul.meniu > li {
+        border:1px solid black;
+        text-align:center;
+        line-height:70px;
+    }
+    #container-poze{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container-poze > figure{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        opacity:0;
+        animation-name:aparitie;
+        animation-duration:5s;
+        animation-fill-mode: forwards;
+    }
+    #container-poze > figure:nth-child(1){
+        animation-delay:1s;
+    }
+    #container-poze > figure:nth-child(2){
+        animation-delay:2s;
+    }
+    #container-poze > figure:nth-child(3){
+        animation-delay:3s;
+    }
+    #container-poze > figure:nth-child(4){
+        animation-delay:4s;
+    }
+    #container-poze > figure:nth-child(5){
+        animation-delay:5s;
+    }
+    #container-poze > figure:nth-child(6){
+        animation-delay:6s;
+    }
+    #container-poze > figure:nth-child(7){
+        animation-delay:7s;
+    }
+    #container-poze > figure:nth-child(8){
+        animation-delay:8s;
+    }
+    #container-poze > figure:nth-child(9){
+        animation-delay:9s;
+    }
+    
+    #container-pagina{
+        display:block;
+        
+        grid-gap:10px;
+        grid-template-areas:"home home home home home"
+                            "anunturi anunturi noutati noutati noutati"
+                            "orar orar noutati noutati noutati"
+                            "galerie galerie galerie galerie galerie"
+    }
+    #container-articol{
+        display: flex;
+        flex-direction: column;
+    }
+    #home{
+        border:solid;
+        padding:10px;
+        grid-area:home;
+    }
+    #home p{
+        transition: backgrund-color 0.5s, color 0.5s, font-size 0.5s;
+    }
+    #home p:hover{
+        background-color: blueviolet;
+        font-size: larger;
+    }
+    #anunturi{
+        border:solid;
+        padding:10px;
+        grid-area: anunturi;
+    }
+    #orar{
+        border:solid;
+        padding:10px;
+        grid-area: orar;
+    }
+    #noutati{
+        border:solid;
+        padding:20px;
+        grid-area: noutati;
+    }
+    #galerie{
+        border:solid;
+        padding:10px;
+        grid-area: galerie;
+    }
+    #noutati img[alt="Matilda de R.D"]{
+        float: left;
+        margin-right: 20px;
+    }
+    #noutati img[alt="Matilda de R.D"]:hover{
+        transform: skew(20deg);
+    }
+    #noutati img[alt="Little Women"]{
+        float: right;
+        margin-left: 20px;
+    }
+    body{
+        background-color:blueviolet;
+        margin:0;
+        padding:0;
+    }
+    body > input{
+        display: block;
+        position: absolute;
+        opacity: 0;
+        top:10px;
+        left:10px;
+        width: 50px;
+        height: 50px;
+    }
+    input:checked ~nav {
+       display: block;
+    }
+}

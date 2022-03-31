@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.jsch.agentproxy">
+    <module_version install_time="1554330908997" last="true" origin="Ant" specification_version="0.15">
+        <file crc="4093348729" name="config/Modules/org-netbeans-libs-jsch-agentproxy.xml"/>
+        <file crc="1228947923" name="modules/ext/jsch-agentproxy-core.jar"/>
+        <file crc="2952433252" name="modules/ext/jsch-agentproxy-pageant.jar"/>
+        <file crc="797651368" name="modules/ext/jsch-agentproxy-sshagent.jar"/>
+        <file crc="3273485973" name="modules/ext/jsch-agentproxy-usocket-jna.jar"/>
+        <file crc="921854988" name="modules/locale/org-netbeans-libs-jsch-agentproxy_ja.jar"/>
+        <file crc="139824308" name="modules/locale/org-netbeans-libs-jsch-agentproxy_pt_BR.jar"/>
+        <file crc="1326149673" name="modules/locale/org-netbeans-libs-jsch-agentproxy_zh_CN.jar"/>
+        <file crc="839261653" name="modules/org-netbeans-libs-jsch-agentproxy.jar"/>
+    </module_version>
+</module>
