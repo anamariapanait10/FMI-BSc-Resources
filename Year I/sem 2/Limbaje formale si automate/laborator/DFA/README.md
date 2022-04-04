@@ -7,11 +7,14 @@ and a list of strings. Display YES / NO for each word and an automatic route
 
 ### Remarks:
 - If there are several possible routes, only the first one found will be displayed
-- Input data contains on the first line n (number of nodes) and m (number of transitions). The following lines describe the transitions in each machine. On the line m + 2 is the initial state index. On the line m + 3 there is a number nf (number of final states) followed by the indices of the respective final states, separated by space. Line m + 4 contains ni, the number of input strings, and on the next ni lines, the respective strings.
-- Output data, for each string: contain YES, if the word is accepted and a possible route, respectively NO, otherwise.
-- The Mealy machine also contains an output character / string for each state.
-- The Moore machine contains on line 2, an output character / string, associated with each state.
-- Presentations will be a maximum of 5 minutes with microphone (preferably: D) and camera (optional).
+- Input data contains on the first line n (number of nodes) and m (number of transitions). 
+  The following lines describe the transitions in each machine. On the line m + 2 is the 
+  initial state index. On the line m + 3 there is a number nf (number of final states) 
+  followed by the indices of the respective final states, separated by space. Line m + 4 
+  contains ni, the number of input strings, and on the next ni lines, the respective strings.
+- Output data, for each string: contain YES, if the word is accepted and a possible route, 
+  respectively NO, otherwise.
+
 
 ### Input data
 ```
@@ -35,3 +38,16 @@ baaaabac
 abccc
 ababaaa
 ```
+
+## Implementation
+
+For the implementation of the automaton was used a custom 
+data structure to save the graph in memory consisting 
+in a dictionary that has as a key the possible states 
+and as values a dictionary that has as a key a letter and 
+as a value the state that can be reached with that letter from 
+the first dictionary key (possible transitions from that state).
+
+### Example:
+
+    transitions = {0: {'a': 1, 'b': 2}, 1: {'b': 1, 'c': 2, 'a': 3}, 2: {'a': 2, 'b': 4}, 3: {'c': 5}, 4: {'a': 4, 'c': 5}}
