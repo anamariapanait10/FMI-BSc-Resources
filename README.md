@@ -1,6 +1,6 @@
 # FMI resources - 2021-2024
 
-In this repository you can find homework, projects, exams and various 
+In this repository you can find homework, projects, exams and many 
 other useful resources for Computer Science students at the University of Bucharest. :duck:
 
 
