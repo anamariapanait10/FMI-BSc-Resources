@@ -1,0 +1,97 @@
+{
+    "cale_galerie": "resurse/imagini/galerie",
+    "imagini": [
+        {
+            "cale_relativa": "pizza1.jpg",
+            "nume": "Pizza 1",
+            "descriere": "Pizza de dimineata",
+            "timp" : "dimineata",
+            "alt": "Alt pentru Pizza 1"
+        },
+        {
+            "cale_relativa": "pizza2.jpg",
+            "nume": "Pizza 2",
+            "descriere": "Pizza de dimineata",
+            "timp" : "dimineata"
+        },
+        {
+            "cale_relativa": "pizza3.jpg",
+            "nume": "Pizza 3",
+            "descriere": "Pizza zilnica",
+            "timp" : "zi"
+        },
+        {
+            "cale_relativa": "pizza4.jpg",
+            "nume": "Pizza 4",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza5.jpg",
+            "nume": "Pizza 5",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza6.jpg",
+            "nume": "Pizza 6",
+            "descriere": "Pizza zilnica",
+            "timp" : "zi",
+            "alt": "Alt pentru Pizza 6"
+        },
+        {
+            "cale_relativa": "pizza7.jpg",
+            "nume": "Pizza 7",
+            "descriere": "Pizza zilnica",
+            "timp" : "zi",
+            "alt": "Alt pentru Pizza 7"
+        },
+        {
+            "cale_relativa": "pizza8.jpg",
+            "nume": "Pizza 8",
+            "descriere": "Pizza formidabila",
+            "alt": "Alt pentru Pizza 8"
+        },
+        {
+            "cale_relativa": "pizza9.jpg",
+            "nume": "Pizza 9",
+            "descriere": "Pizza de noapte",
+            "timp" : "noapte"
+        },
+        {
+            "cale_relativa": "pizza10.jpg",
+            "nume": "Pizza 10",
+            "descriere": "Pizza de noapte",
+            "timp" : "noapte",
+            "alt": "Alt pentru Pizza 10"
+        },
+        {
+            "cale_relativa": "pizza11.jpg",
+            "nume": "Pizza 11",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza12.jpg",
+            "nume": "Pizza 12",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza13.jpg",
+            "nume": "Pizza 13",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza14.jpg",
+            "nume": "Pizza 14",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza15.jpg",
+            "nume": "Pizza 15",
+            "descriere": "Pizza formidabila"
+        },
+        {
+            "cale_relativa": "pizza16.jpg",
+            "nume": "Pizza 16",
+            "descriere": "Pizza formidabila"
+        }
+    ]
+}

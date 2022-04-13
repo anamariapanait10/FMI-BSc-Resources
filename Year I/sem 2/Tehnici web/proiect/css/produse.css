@@ -1,0 +1,367 @@
+html {
+    scroll-padding-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    ul.meniu {
+        display: none;
+    }
+    ul.meniu li {
+        width: 100%;
+    }
+    .dropdown-content {
+        position: relative;
+    }
+    .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+    }
+    #hamburger {
+        display: block;
+        width: 33px;
+        height: 33px;
+        position: relative;
+        left: 2px;
+    }
+    #ch-meniu {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        top: 2px;
+        left: 2px;
+        width: 27px;
+        height: 25px;
+    }
+    #ch-meniu:checked~ul {
+        display: block;
+    }
+    .meniu {
+        display: none;
+    }
+}
+
+ul.meniu .dropdown-content {
+    position: relative;
+}
+
+header {
+    background-color: #f0d722;
+    margin-top: 50px;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: green;
+    }
+    100% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+}
+
+header img {
+    display: inline-block;
+    height: 45px;
+    margin-left: 15px;
+    animation: rotation 2s infinite linear;
+    vertical-align: middle;
+}
+
+header img:hover {
+    animation: pulse 1s infinite linear;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 25px;
+    font-family: "Sofia";
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+body {
+    --inalt-meniu: 2rem;
+    background-color: #f8f0b6;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+nav {
+    height: var(--inalt-meniu);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #116c43;
+    color: white;
+    z-index: 100;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    padding: 0;
+    margin: 0;
+}
+
+ul.meniu {
+    display: block;
+}
+
+ul.meniu li {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 130px;
+    text-align: center;
+    list-style-type: none;
+    height: var(--inalt-meniu);
+    float: left;
+    background-color: #116c43;
+}
+
+ul.meniu li:hover {
+    box-shadow: inset 0px 0px 15px 5px rgba(5, 5, 5, 0.4);
+    transition: box-shadow ease-in-out 0.4s;
+}
+
+ul.meniu li:hover ul {
+    display: block;
+}
+
+ul.meniu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+ul.meniu li div span {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+ul.meniu ul {
+    display: none;
+}
+
+ul.meniu li.dropdown ul {
+    background-color: red;
+}
+
+ul.dropdown-content li {
+    background-color: #f0290a;
+}
+
+#hamburger {
+    display: none;
+}
+
+#ch-meniu {
+    display: none;
+}
+
+#textacasa {
+    display: inline-block;
+}
+
+#btnacasa {
+    width: 40px;
+    height: 25px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: lightgrey;
+    color: grey;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.5s ease-in;
+}
+
+#btnacasa:hover {
+    background-color: gray;
+}
+
+#btnacasa:hover .triangle-up {
+    border-bottom: 10px solid orange;
+    padding-top: 0;
+}
+
+@keyframes deplasare {
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: 90%;
+    }
+}
+
+@keyframes aparitie {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container-poze {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-poze>figure {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    text-align: center;
+    opacity: 0;
+    animation-name: aparitie;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.container-poze>figure>img {
+    max-width: 90%;
+    transition: transform 0.5s, border-radius 2s;
+}
+
+.container-poze>figure>img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s, border-radius 2s;
+    border-radius: 50px;
+}
+
+.container-poze>figure:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.container-poze>figure:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.container-poze>figure:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.container-poze>figure:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.container-poze>figure:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.container-poze>figure:nth-child(6) {
+    animation-delay: 3s;
+}
+
+.container-poze>figure:nth-child(7) {
+    animation-delay: 3.5s;
+}
+
+.container-poze>figure:nth-child(8) {
+    animation-delay: 4s;
+}
+
+.container-poze>figure:nth-child(9) {
+    animation-delay: 4.5s;
+}
+
+#container-pagina {
+    display: block;
+    grid-gap: 10px;
+    grid-template-areas: "home home home home home" "anunturi anunturi noutati noutati noutati" "orar orar noutati noutati noutati" "galerie galerie galerie galerie galerie"
+}
+
+#container-articol {
+    display: flex;
+    flex-direction: column;
+}
+
+#home {
+    border: solid;
+    padding: 10px;
+    grid-area: home;
+}
+
+#home p {
+    transition: backgrund-color 0.5s, color 0.5s, font-size 0.5s;
+}
+
+#home p:hover {
+    background-color: blueviolet;
+    font-size: larger;
+}
+
+#anunturi {
+    border: solid;
+    padding: 10px;
+    grid-area: anunturi;
+}
+
+#orar {
+    border: solid;
+    padding: 10px;
+    grid-area: orar;
+}
+
+#noutati {
+    border: solid;
+    padding: 20px;
+    grid-area: noutati;
+}
+
+#galerie {
+    border: solid;
+    padding: 10px;
+    grid-area: galerie;
+}
+
+.titlu-sectiune::before {
+    content: "- ";
+    color: green;
+}
+
+.titlu-sectiune::after {
+    content: " \1F355";
+    color: red;
+}
