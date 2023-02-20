@@ -4,9 +4,7 @@ In this repository you can find homework, projects, exams and many
 other useful resources for Computer Science students at the University of Bucharest. :duck:
 
 
-## Content
-
-### [First year 2021-2022](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I)
+## [First year 2021-2022](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I)
 #### First semester
 
 | Discipline                                       | Credits |
@@ -32,7 +30,7 @@ other useful resources for Computer Science students at the University of Buchar
 | Competențe specifice într-o limbă străină        |    2    |
 | Educație fizică                                  |    2    |
 
-### Second year 2022-2023
+## Second year 2022-2023
 #### First semester
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -55,7 +53,7 @@ other useful resources for Computer Science students at the University of Buchar
 | Programare avansată pe obiecte                   |    4    |
 | Competențe avansate într-o limbă străină II      |    2    |
 
-### Third year 2023-2024
+## Third year 2023-2024
 #### First semester
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
