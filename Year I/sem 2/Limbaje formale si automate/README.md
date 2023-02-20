@@ -1,16 +1,16 @@
 ## Professors:
-course - Paun Andrei
-seminar - Negru Maria
+course - Paun Andrei \
+seminar - Negru Maria \
 laboratory - Manea Andrei Alexandru
 
 ## Useful links:
 
 Laboratory:
-Grade: 3 projects -> 3.5 (easy), 4p (medium), 4.5p (hard)
+Grade: 3 projects -> 3.5 (easy), 4p (medium), 4.5p (hard) \
 A 0.5p bonus is awarded for each project for clean code (identation, nice writing etc.).
 
 Proiectul 1 (individual, maxim 6 studenti/proiect din grupa)
-Deadline ~ saptamana 7-8
+Deadline ~ saptamana 7-8 \
 Sa se scrie un algoritm care are ca input un <placeholder> si o lista de string-uri. Sa se afiseze DA/NU pentru fiecare cuvant si un traseu/drum in automat (cel putin pentru primul), daca este acceptat sau nu. Unde <placeholder>:
 1. automat finit determinist (DFA)
 2. automat finit nedeterminist fara lambda tranzitii (NFA)
@@ -32,7 +32,7 @@ Deadline ~ saptamana 11-12
  
 
 
-Proiectul 3 (maxim 10 studenti/proiect)
+Proiectul 3 (maxim 10 studenti/proiect) \
 Deadline ~ saptamana 14 -> maxim 2 zile inainte de examen
 1. Algoritmul CYK
 2. transformare gramatica independenta de context in PDA si rularea unui input in PDA (https://www.javatpoint.com/automata-cfg-to-pda-conversion?fbclid=IwAR1XfICRHd2jJKGthjFKJR3Fn9_-heTf-Hl47DOJNiMxRWCNuge3bODSb9w)
