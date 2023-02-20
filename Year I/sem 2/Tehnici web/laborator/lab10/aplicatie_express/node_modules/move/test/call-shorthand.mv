@@ -1,0 +1,54 @@
+import assert
+
+foo = ^(arg1){ return arg1 }
+
+# Straight-forward simple input
+assert.equal foo("Hello"), "Hello"
+
+# Chained. Translates to foo(foo(foo("Hello")))
+assert.equal foo(foo foo "Hello"), "Hello"
+
+# Keywords arguments should take precedence over shorthand arguments
+assert.equal foo {arg1:"Hello"}, "Hello"
+
+# Call precedence should invoke the anonymous lambda first, then foo
+assert.equal foo (^{ "Hello" })(), "Hello"
+
+# Multiple arguments
+foo3 = ^(a, b, c){ return ''+a+b+c }
+
+# Should translate into: value = foo3("A", "B", "C")
+value = foo3 "A", "B", "C"
+assert.equal value, "ABC"
+
+# Should translate into: value = foo3("A", foo3("B", "C"))
+value = foo3 "A", foo3 "B", "C"
+assert.equal value, "ABCundefinedundefined"
+
+# Inside object expressions. Terminated by end of object expression
+# or start of new object key (e.g. "b:")
+obj = {
+  a: foo "hello1",
+  b: foo "hello2",
+}
+assert.equal obj.a, "hello1"
+assert.equal obj.b, "hello2"
+
+# Inside object expressions. Terminated by end of object expression
+# or start of new object key (e.g. "b:")
+obj = {a: foo "hello1", b: foo "hello2", }
+assert.equal obj.a, "hello1"
+assert.equal obj.b, "hello2"
+
+# Inside object expressions with line wrapping (kind of crazy).
+hellouno = 'hellouno'
+HELLOTWO = 'HELLOTWO'
+obj = {
+  a: foo3 "hello1",
+         "HELLOONE",
+hellouno,
+  b: foo3 "hello2", HELLOTWO,
+'helloduo'
+}
+assert.equal obj.a, "hello1HELLOONEhellouno"
+assert.equal obj.b, "hello2HELLOTWOhelloduo"

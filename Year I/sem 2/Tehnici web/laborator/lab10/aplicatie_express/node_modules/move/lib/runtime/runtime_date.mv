@@ -1,0 +1,22 @@
+if (Date.distantFuture == undefined)
+Date.distantFuture = new Date(359753450957352)
+
+if (Date.distantPast == undefined)
+Date.distantPast = new Date(-62135686800000)
+
+if (!Date.nowUTC)
+Date.nowUTC = ^{ (new Date()).getUTCTime() }
+
+if (!Date.prototype.getUTCTime)
+Object.defineConstant Date.prototype, 'getUTCTime', getUTCTime = ^{
+  this.getTime() - this.getTimezoneOffset()
+}
+
+if (!Date.prototype.getUTCComponents)
+Object.defineConstant Date.prototype, 'getUTCComponents', getUTCComponents = ^{
+  return [
+    this.getUTCFullYear(), this.getUTCMonth()+1, this.getUTCDate(),
+    this.getUTCHours(), this.getUTCMinutes(), this.getUTCSeconds(),
+    this.getUTCMilliseconds()
+  ];
+}

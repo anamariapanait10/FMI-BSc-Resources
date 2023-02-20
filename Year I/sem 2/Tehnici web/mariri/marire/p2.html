@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P2</title>
+
+  <style>
+    .stil{
+      color: aqua;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+
+      var nr = Math.floor(Math.random()*11) + 10;
+      for(var i = 0; i < nr; i++){
+        var par = document.createElement("p");
+        par.innerHTML = "Eu sunt paragraful "+(i);
+        par.className = "stil";
+        par.onclick=function(event){
+          var culoare = "rgb("+Math.floor(Math.random() * 256)+", "
+          +Math.floor(Math.random() * 256)+", "
+          +Math.floor(Math.random() * 256)+ ")";
+          this.style.color = culoare;
+          event.stopPropagation();
+        }
+        document.body.appendChild(par);
+      }
+      window.onclick=function(event){
+        var paragrafe = document.body.getElementsByTagName("p");
+        for(var par of paragrafe)
+          par.style.color = "aqua";
+      }
+    }    
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

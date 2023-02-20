@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P3</title>
+
+  <script>
+    window.onload = function(){
+      var ord = localStorage.getItem("primul");
+      if(ord){  
+        var lis = document.body.getElementsByTagName("li");
+        var parent = lis[0].parentNode;
+        parent.remove();
+        ord = parseInt(ord.substring(ord.length-1, ord.length));
+        if(ord == 0){
+          ord = 10;
+        }
+        for(var i = 1; i <= 10; i++){
+          var li = document.createElement("li");
+          li.innerText = "element"+ord;
+          if(ord != 9)
+            ord = (ord + 1) % 10;
+          else
+            ord = 10;
+          document.body.appendChild(li);
+        }
+      } else {
+        var int = setInterval(function(){
+          var cb = document.getElementById("cb");
+          if(cb.checked){
+            clearInterval(int);
+            var lis = document.body.getElementsByTagName("li");
+            localStorage.setItem("primul", lis[0].innerText);
+          } else {
+            var lis = document.body.getElementsByTagName("li");
+            var last_elem = lis[lis.length-1];
+            var parentNode = last_elem.parentNode;
+            parentNode.removeChild(last_elem);
+            parentNode.insertBefore(last_elem, lis[0]);
+          }
+        }, 3000);
+      }
+    }
+    
+  </script>
+
+</head>
+
+<body>
+  <input type="checkbox" id="cb" value="stop">
+  <ul>
+     <li>element1</li>
+     <li>element2</li>
+     <li>element3</li>
+     <li>element4</li>
+     <li>element5</li>
+     <li>element6</li>
+     <li>element7</li>
+     <li>element8</li>
+     <li>element9</li>
+     <li>element10</li>
+  </ul>
+</body>
+
+</html>

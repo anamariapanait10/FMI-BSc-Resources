@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+    
+</style>
+
+<script>
+    window.onload = function(){
+
+        inp = document.getElementById("numar");
+        paragrafe = document.getElementsByTagName("p");
+        local = localStorage.getItem("nr_sterse");
+        if(local){
+            inp.value = local;
+        }
+
+        window.onkeydown = function(event){
+            var nr = parseInt(inp.value);
+            var nr_sterse = 0;
+            if(event.key == "s"){
+                window.onkeydown = null;
+                // for(par of paragrafe){
+                //     setTimeout(function(){
+                //         if(par.innerText.split(" ").length > nr){
+                //             nr_sterse++;
+                //             document.body.removeChild(par);
+                //         }
+                //     }, 1000);
+                var c=setInterval(function(){
+                    var x;
+                    for(let p of paragrafe){
+                        if (p.innerHTML.split(" ").length > nr){
+                            x = p;
+                            break;
+                        }
+                    }
+                    if(x){
+                        nr_sterse++;
+                        document.body.removeChild(x);   //parinte.removeChild(copil)
+                    }
+                    else {
+                        clearInterval(c);
+                        alert(nr_sterse);
+                        localStorage.setItem("nr_sterse",nr_sterse);
+                    }
+                }, 1000);
+                    
+            }
+        }
+
+    }
+
+</script>
+
+
+</head>
+<body>
+<input type="text" id="numar">
+<p>examen la tehnici web</p>
+<p>examen la tehnici web</p>
+<p>examen la tehnici</p>
+<p>examen la tehnici web</p>
+<p>examen la tehnici web</p>
+<p>examen la tehnici web</p>
+<p>examen</p>
+<p>examen la tehnici web</p>
+<p>examen la tehnici web</p>
+<p>examen la</p>
+
+</body>
+</html>

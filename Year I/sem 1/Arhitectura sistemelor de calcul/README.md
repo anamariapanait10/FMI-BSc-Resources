@@ -1,4 +1,4 @@
-## Professor: 
+## Professors: 
 curs & seminar - Cristian Rusu
 laborator - Ruxandra Balucea
 

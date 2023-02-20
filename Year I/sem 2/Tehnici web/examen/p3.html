@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>P3</title>
+  <style>
+  </style>
+  <script>
+    var apasat = false;
+    var idx = 0;
+    window.onload = function () {
+      var input = document.getElementById("data");
+      var data = localStorage.getItem("data");
+      if (data != null) {
+        input.value = data;
+      }
+    }
+    window.onkeydown = function (event) {
+      var input = document.getElementById("data");
+      var ul = document.getElementsByTagName("ul")[0];
+      if (event.key == 's') {
+        if (!apasat) {
+          var int = setInterval(function () {
+            var rand_r = Math.floor(Math.random() * (256)).toString(16), rand_g = Math.floor(Math.random() * (256)).toString(16), rand_b = Math.floor(Math.random() * (256)).toString(16);
+            if (rand_r.length < 2) {
+              rand_r = '0' + rand_r;
+            }
+            if (rand_g.length < 2) {
+              rand_g = '0' + rand_g;
+            }
+            if (rand_b.length < 2) {
+              rand_b = '0' + rand_b;
+            }
+            var Color = "#" + rand_r + rand_g + rand_b;
+            ul.children[idx].innerHTML = new Date().toString();
+            ul.children[idx++].style.backgroundColor = Color;
+            if (idx == 10) {
+              clearInterval(int);
+              localStorage.setItem("data", new Date().toString());
+            }
+          }, 2000);
+        }
+        apasat = true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" id="data">
+  <ul>
+    <li>Elementul 1</li>
+    <li>Elementul 2</li>
+    <li>Elementul 3</li>
+    <li>Elementul 4</li>
+    <li>Elementul 5</li>
+    <li>Elementul 6</li>
+    <li>Elementul 7</li>
+    <li>Elementul 8</li>
+    <li>Elementul 9</li>
+    <li>Elementul 10</li>
+  </ul>
+</body>
+
+</html>

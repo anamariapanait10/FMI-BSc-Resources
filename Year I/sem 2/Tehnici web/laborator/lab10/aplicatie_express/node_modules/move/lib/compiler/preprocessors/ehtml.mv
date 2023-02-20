@@ -1,0 +1,163 @@
+# Embedded HTML
+export process = ^(src, options) {
+  i = 0
+  skipString = ^(endch) {
+    prevCh = null
+    while ((ch = src[i++])) {
+      if (ch == endch && prevCh != '\\')
+        break;
+      prevCh = ch
+    }
+  }
+
+  readEHTMLNode = ^{
+    # when this function is entered, the current character is '<'
+    stackDepth = 0
+    start = i-1
+    ch = '<'
+    ranges = []
+
+    while (ch == '<') {
+      firstCh = prevCh = null
+      while ((ch = src[i++]) && ch != '>') {
+        if (firstCh == null)
+          firstCh = ch
+        if (ch == '{' && prevCh != '\\') {
+          ranges.push([true, start, i-1])
+          start = i
+          buf = parseAny true
+          ranges.push([false, buf])
+          start = i
+        }
+        prevCh = ch
+      }
+      #print 'firstCh:', firstCh
+      if (firstCh == '/') {
+        # terminator
+        #print '--stackDepth';
+        --stackDepth
+        if (stackDepth < 0)
+          throw Error('EHTML: Premature termination')
+      } else if (prevCh == '/') {
+        # self-terminating
+      } else {
+        #print '++stackDepth';
+        ++stackDepth
+      }
+
+      if (!ch || stackDepth == 0)
+        break
+
+      while ((ch = src[i++]) && ch != '<') {
+        if (ch == '{' && prevCh != '\\') {
+          ranges.push([true, start, i-1])
+          start = i
+          buf = parseAny true
+          ranges.push([false, buf])
+          start = i
+        }
+        prevCh = ch
+      }
+    }
+
+    ranges.push([true, start, i])
+    ehtml = ''
+    ranges.forEach ^(range) {
+      if (range[0]) {
+        s = src.substring(range[1], range[2])
+        s = s.replace(/\n/g, '\\n')
+        s = s.replace(/\t/g, '\\t')
+        s = s.replace(/'/g, '\\\'')
+      } else {
+        s = "'+("+range[1]+")+'"
+      }
+      ehtml += s
+    }
+
+    #print 'ranges:', ranges
+
+    ehtml = "EHTML('"+ehtml+"')"
+    #print 'ehtml:', ehtml
+    ehtml
+  }
+
+  parseAny = ^(isDeep) {
+    output = ''
+    STATE_EHTML = 0
+    STATE_LT = 1
+    state = STATE_EHTML
+    prevCh = null
+    deepDepth = 1
+    while ((ch = src[i++])) {
+      #print state+'>', ch
+      checkState = false
+      switch (ch) {
+        case ' ':
+        case '\n':
+        case '\r':
+        case '\t':
+          output += ch
+          break
+        case '"':
+          p = i
+          skipString '"'
+          output += src.substring p-1, i
+          break
+        case "'":
+          p = i
+          skipString "'"
+          output += src.substring p-1, i
+          break
+        case '<':
+          if (state == STATE_LT) {
+            state = STATE_EHTML
+            output += ch
+          } else {
+            output += readEHTMLNode()
+          }
+          break
+        default:
+          output += ch
+          checkState = true
+      }
+
+      if (checkState) {
+        if (isDeep && prevCh != '\\') {
+          if (ch == '{') {
+            ++deepDepth
+          } else if (ch == '}') {
+            if ((--deepDepth) == 0) {
+              output = output.substr 0, output.length-1  # remove last "}"
+              break;
+            }
+          }
+        }
+
+        if (ch.match(/[a-z0-9_\)\}]/i)) {
+          state = STATE_LT
+        } else {
+          state = STATE_EHTML
+        }
+        #print ch, 'state', state
+      }
+
+      prevCh = ch
+    }
+
+    output
+  }
+
+  output = parseAny()
+
+  if (!options.ehtmlDisableImplicitViewConstructor) {
+    if (output.match(/(exports\.createView|export\s+createView)\s*[=\r\n]/)) {
+      // Convert the exported module object to a view factory
+      moduleName = Move.filenameToModuleId(options.filename).split('/')[-1:][0].replace '.', '_'
+      output = 'exports = module.exports = '+moduleName+' = ^{'+
+               ' EHTML.createViewImpl.apply exports, arguments };'+
+               'exports.__domid = module.id.replace("/", "_");' + output
+    }
+  }
+  
+  output = 'EHTML = Move.EHTML\n' + output
+}

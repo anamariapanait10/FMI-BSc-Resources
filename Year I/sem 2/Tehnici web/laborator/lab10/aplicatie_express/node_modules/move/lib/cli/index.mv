@@ -1,0 +1,68 @@
+# Move command line interface
+import fs, cli = './cli', Path = 'path'
+
+# Redirect print
+Move.runtime.print = console.error
+
+export program = new cli.Program([
+  'Usage: move [global options] <command> [command arguments ..]\n'+
+  '       move [global options] <filename>',
+  'Global options:',
+	#['quiet',   'Suppress all messages except errors.'],
+	#['verbose', 'Print details.'],
+	#['debug',   'Print too much details.'],
+	['help',    'Show this help message.'],
+])
+
+
+program.on 'options', ^{
+  #print 'options:', @options
+}
+
+# Program entry
+export main = ^(argv) {
+  
+  # Detect filename for usage form:
+  #   move <filename> [options]
+  argv = Array.prototype.slice.call(argv || process.argv)
+  for (i=2; i < argv.length; ++i) {
+    v = argv[i]
+    if (v[0] == '-') continue
+    try {
+      st = fs.statSync v
+      if (st.isFile())
+        argv.splice i, 0, 'run'
+    } catch (e) { }
+    break
+  }
+  
+  program.main argv
+}
+
+# Convert a filename to a module id
+export filenameToModuleId = ^(filename) {
+  filename = filename ? Text filename : ''
+  if (extname = Path.extname filename)
+    filename = filename[:-extname.length]
+  filename.replace(/\/index$|^index$|^\/+|\/+$/g, '')
+}
+
+
+# Disable experimental commands unless running from source directory
+disabledCommands = ['build']
+try {
+  stat = fs.statSync __dirname+'/../../.git'
+  if (stat.isDirectory()) {
+    # Do not disable any commands
+    disabledCommands = []
+  }
+} catch (e) {}
+
+
+# Load commands
+fs.readdirSync(__dirname+'/commands').sort().forEach ^(filename) {
+  commandName = filename.replace(/\.mv$/, '')
+  if (disabledCommands.indexOf(commandName) == -1)
+    program.cmd[commandName] = require './commands/'+commandName
+}
+

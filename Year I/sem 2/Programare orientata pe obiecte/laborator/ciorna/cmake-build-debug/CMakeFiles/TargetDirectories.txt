@@ -1,0 +1,3 @@
+C:/Users/Ana/Desktop/FMI/Year I/sem 2/Programare orientata pe obiecte/laborator/ciorna/cmake-build-debug/CMakeFiles/ciorna.dir
+C:/Users/Ana/Desktop/FMI/Year I/sem 2/Programare orientata pe obiecte/laborator/ciorna/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ana/Desktop/FMI/Year I/sem 2/Programare orientata pe obiecte/laborator/ciorna/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P2</title>
+    <style>
+        .c1 {
+            color: red;
+        }
+        .c2 {
+            color: blue;
+        }
+        .c3 {
+            color: yellow;
+        }
+        .c4 {
+            color: green;
+        }
+        .c5 {
+            color: orange;
+        }
+    </style>
+  <script>
+    window.onload = function(){
+        var n = 10;
+        var k = new Date().getMinutes();
+        if(k > n)
+            n = k;
+        for(var i = 0; i < n; i++){
+            par = document.createElement("p");
+            par.innerHTML = "Ana";
+            var random_nr = Math.floor(Math.random()*5) + 1;
+            par.className = "c"+random_nr;
+            par.style.border = "solid black";
+            par.onclick = function(event){
+                event.stopPropagation();
+                var clasa = this.className;
+                console.log(clasa);
+                var paragrafe = document.getElementsByClassName(clasa);
+                var nr_par = paragrafe.length;
+                console.log(paragrafe.length);
+                for(var j = nr_par - 1; j >= 0; j--){
+                    document.body.removeChild(paragrafe[j]);
+                }
+                var paragra = document.getElementsByClassName(clasa);
+                console.log(paragrafe.length);
+            }
+            document.body.appendChild(par);
+        }
+
+        window.onclick = function(event){
+            console.log(event.clientY);
+        }
+    }    
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Model subiect</title>
+
+<style>
+
+.container{
+  width:250px;
+  height:50vh;
+  border:2px solid black;
+  display:grid;
+/*  grid-template-columns: auto auto auto;*/
+  grid-template-areas:
+        "e1 . e3 ."
+        "e1 e2 e3 ."
+        "e1 . e3 e4";*/
+ }
+
+.container > div{
+  border:3px double blue;
+  font-size:15px;
+  margin:1px;
+}
+
+div:nth-child(1){
+  grid-area: e1;
+
+}
+
+div:nth-child(2){
+  grid-area: e2;
+
+}
+div:nth-child(3){
+  grid-area: e3;
+
+}
+div:nth-child(4){
+  grid-area: e4;
+
+}
+div:nth-child(5){
+  grid-area: e5;
+
+}
+
+
+@media screen and (max-width:600px) and (max-height:500px){
+
+.container{
+  display:block;
+}
+
+.container > div {
+  transition: font-size 3s;
+}
+
+.container > div:hover {
+                        font-size:30px;
+                       }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<div>DIV 1</div>
+<div>DIV 2</div>
+<div>DIV 3</div>
+<div>DIV 4</div>
+</div>
+
+</body>
+</html>

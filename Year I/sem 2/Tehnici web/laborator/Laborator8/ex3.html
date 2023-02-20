@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: pink;
+    }
+
+    .container {
+      width: 250px;
+      height: 50vh;
+      border-color: blue;
+      border-style: dotted;
+      display: grid;
+      grid-template-areas: '. d2 d5''d1 d3 d5''. d4 d5';
+    }
+
+    div:nth-child(1) {
+      grid-area: d1;
+      font-size: 15;
+      border-color: blue;
+      border-style: dotted;
+    }
+
+    div:nth-child(2) {
+      grid-area: d2;
+      font-size: 15;
+      border-color: blue;
+      border-style: dotted;
+    }
+
+    div:nth-child(3) {
+      grid-area: d3;
+      font-size: 15;
+      border-color: blue;
+      border-style: dotted;
+    }
+
+    div:nth-child(4) {
+      grid-area: d4;
+      font-size: 15;
+      border-color: blue;
+      border-style: dotted;
+    }
+
+    div:nth-child(5) {
+      grid-area: d5;
+      font-size: 15;
+      border-color: blue;
+      border-style: dotted;
+    }
+
+    @media screen and (max-width: 500px) and (max-height: 600px) {
+      .container {
+        width: 250px;
+        height: 50vh;
+        border-color: blue;
+        border-style: dotted;
+        display: block;
+        grid-template-areas: '. d2 d5''d1 d3 d5''. d4 d5';
+      }
+
+      div:nth-child(1):hover {
+        font-size: 30;
+        border-color: yellow;
+        border-style: dotted;
+      }
+
+      div:nth-child(2):hover {
+        font-size: 30;
+        border-color: yellow;
+        border-style: dotted;
+      }
+
+      div:nth-child(3):hover {
+        font-size: 30;
+        border-color: yellow;
+        border-style: dotted;
+      }
+
+      div:nth-child(4):hover {
+        font-size: 30;
+        border-color: yellow;
+        border-style: dotted;
+      }
+
+      div:nth-child(5):hover {
+        font-size: 30;
+        border-color: yellow;
+        border-style: dotted;
+      }
+
+    }
+  </style>
+  <script src="ex3.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <!--
+  <label><input type="radio" name="culori" value="red">red</label><br>
+  <label><input type="radio" name="culori" value="blue">blue</label><br>
+  <label><input type="radio" name="culori" value="green">green</label><br>
+  <label><input type="radio" name="culori" value="white">white</label><br>
+  <label><input type="radio" name="culori" value="black">black</label>
+  -->
+</body>
+
+</html>

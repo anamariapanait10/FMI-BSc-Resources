@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>P2</title>
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      background-color: lightyellow;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var body = document.getElementsByTagName('body')[0];
+      var red = document.createElement("input");
+      red.type = "radio";
+      red.id = "red";
+      red.name = "grup";
+      red.value = "red";
+
+      var label = document.createElement("label");
+      label.appendChild(red);
+      label.appendChild(document.createTextNode("Red"));
+
+      red.onclick = function (event) {
+        body.style.backgroundColor = "red";
+        event.stopPropagation();
+      }
+
+      body.appendChild(label);
+
+      var blue = document.createElement("input");
+      blue.type = "radio";
+      blue.id = "blue";
+      blue.name = "grup";
+      blue.value = "blue";
+
+      blue.onclick = function (event) {
+        body.style.backgroundColor = "blue";
+        event.stopPropagation();
+      }
+
+      var label = document.createElement("label");
+      label.appendChild(blue);
+      label.appendChild(document.createTextNode("Blue"));
+
+      body.appendChild(label);
+
+      var green = document.createElement("input");
+      green.type = "radio";
+      green.id = "green";
+      green.name = "grup";
+      green.value = "green";
+
+      green.onclick = function (event) {
+        body.style.backgroundColor = "green";
+        event.stopPropagation();
+      }
+
+      var label = document.createElement("label");
+      label.appendChild(green);
+      label.appendChild(document.createTextNode("Green"));
+
+      body.appendChild(label);
+
+      var purple = document.createElement("input");
+      purple.type = "radio";
+      purple.id = "purple";
+      purple.name = "grup";
+      purple.value = "purple";
+
+      purple.onclick = function (event) {
+        body.style.backgroundColor = "purple";
+        event.stopPropagation();
+      }
+
+      var label = document.createElement("label");
+      label.appendChild(purple);
+      label.appendChild(document.createTextNode("Purple"));
+
+      body.appendChild(label);
+
+      var yellow = document.createElement("input");
+      yellow.type = "radio";
+      yellow.id = "yellow";
+      yellow.name = "grup";
+      yellow.value = "yellow";
+
+      yellow.onclick = function (event) {
+        body.style.backgroundColor = "yellow";
+        event.stopPropagation();
+      }
+
+      var label = document.createElement("label");
+      label.appendChild(yellow);
+      label.appendChild(document.createTextNode("Yellow"));
+
+      body.appendChild(label);
+
+      body.onclick = function () {
+        body.style.backgroundColor = "lightyellow";
+        red.checked = false;
+        blue.checked = false;
+        green.checked = false;
+        purple.checked = false;
+        yellow.checked = false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P3</title>
+
+  <style>
+
+  </style>
+
+  <script>
+        window.onload = function(){
+            inp = document.getElementById("data");
+            inp.value = new Date();
+            inp.style.color = "red";
+            var c = localStorage.getItem("culoare");
+            if(c){
+                inp.style.color = c;
+            }
+            var int = setInterval(function(){
+                var sel = document.getElementById("select");
+                if(sel.selectedIndex == 2){
+                    sel.selectedIndex = 0;
+                } else{
+                    sel.selectedIndex++;
+                }
+                inp.style.color = sel.value;
+
+            }, 3000);
+            window.onkeydown = function(event){
+                if(event.key == "s"){
+                    clearInterval(int);
+                    localStorage.setItem("culoare", inp.style.color);
+                }
+            }
+        }
+  </script>
+
+</head>
+
+<body>
+<input type="text" id="data">
+<select id="select">
+    <option value="red" selected="selected">red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+</select>
+</body>
+
+</html>

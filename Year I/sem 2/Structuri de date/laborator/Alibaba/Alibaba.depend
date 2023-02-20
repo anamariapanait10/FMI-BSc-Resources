@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1649778352 source:c:\users\ana\desktop\fmi\year i\sem 2\structuri de date\laborator\alibaba\main.cpp
+	<fstream>
+	<iostream>
+	<string.h>
+	<stack>
+

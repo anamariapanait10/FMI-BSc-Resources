@@ -1,0 +1,32 @@
+/*obiect.onclick = function()
+{//cod}
+sau
+function f()
+{}
+obiect.onlcick = f;*/
+
+window.onload = function()
+{
+  document.querySelector("button").onclick = function() {
+    var titlu = document.getElementById("titlu").value;
+    var continut = document.getElementById("post").value;
+    //alert(titlu + " " + continut);
+
+  var postare = document.createElement("article");
+  document.getElementById("postari").appendChild(postare);
+  postare.className = "post";
+
+  var T = document.createElement("h3");
+  var c = new Date();
+
+   T.innerHTML = "Titlu: " + titlu + "\n" + "Data: " + c.getDate() + "/" + (c.getMonth()+1)+ "/" + c.getFullYear();
+   var p = document.createElement("p");
+   p.innerHTML = "Continut: " + continut;
+   postare.appendChild(T);
+   postare.appendChild(p);
+   postare.ondblclick = function(){
+     document.getElementById("postari").removeChild(postare);
+   }
+  }
+
+}

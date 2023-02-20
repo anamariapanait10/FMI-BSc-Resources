@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1654938318 source:c:\users\ana\desktop\fmi\year i\sem 2\limbaje formale si automate\laborator\cyk algorithm\main.cpp
+	<iostream>
+	<string>
+	<iomanip>
+
