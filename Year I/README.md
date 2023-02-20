@@ -1,6 +1,6 @@
 # Year I
 
-### First semester
+## [First semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%201)
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -13,7 +13,7 @@
 | Competențe de bază într-o limbă străină          |    2    |
 | Educație fizică                                  |    2    |
 
-### Second semester
+## [Second semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%202)
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
 | Geometrie și algebră liniară                     |    4    |
