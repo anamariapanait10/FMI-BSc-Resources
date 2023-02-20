@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P2</title>
+
+  <style>
+    .buton{
+      border: solid blue 2px;
+      display: block;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      localStorage.setItem("prima", "da");
+        window.onclick = function(){
+          var local = localStorage.getItem("prima");
+          if(local == "da"){
+            var nr = Math.floor(Math.random()*11) + 5;
+            for(var i = 0; i < nr; i++){
+              var btn = document.createElement("btn");
+              btn.innerHTML = "Butonul "+(i+1);
+              if ((i+1)%2==0){
+                btn.style.backgroundColor = "orange";
+              } else{
+                btn.style.backgroundColor = "purple";
+              }
+              btn.className = "buton";
+              btn.onclick = function(event){
+                document.body.removeChild(this);
+                event.stopPropagation();
+              }
+              document.body.appendChild(btn);
+            }
+            localStorage.setItem("prima", false);
+          } else {
+            var btn = document.getElementsByTagName("btn");
+            alert(btn.length);
+          }
+        }
+        
+    }    
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

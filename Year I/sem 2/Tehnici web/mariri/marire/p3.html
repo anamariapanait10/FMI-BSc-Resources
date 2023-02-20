@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P3</title>
+
+  <script>
+    window.onload = function(){
+      var p = document.body.getElementsByTagName("p");
+      var rad = document.getElementsByTagName("input");
+
+      var data = new Date();
+      data = data.toLocaleTimeString();
+      p[0].innerHTML = "Ana-Maria, " + data;
+
+      var local = localStorage.getItem("btn");
+      if(local){
+        rad[local].checked = "true";
+        p[0].style.fontSize = rad[local].value;
+      }
+
+      var int = setInterval(function(){ 
+        for(var i = 0; i < rad.length; i++){   
+          if(rad[i].checked == true){
+            var val = rad[i].value;
+            if(val=="50px"){
+              rad[i].checked = "false";
+              rad[0].checked = "true";
+              p[0].style.fontSize = rad[0].value;
+            } else {
+              rad[i].checked = "false";
+              rad[i+1].checked = "true";
+              p[0].style.fontSize = rad[i+1].value;
+            }
+            break;
+          }  
+        }
+
+      }, 3000);
+      window.onkeydown = function(event){
+          if(event.key == "x"){
+              clearInterval(int);
+              var index = 0;
+              for(var i = 0; i < rad.length; i++){
+                if(rad[i].checked){
+                  index = i;
+                  break;
+                }
+              }
+              localStorage.setItem("btn", index);
+          }
+      }
+    }
+    
+  </script>
+
+</head>
+<body>
+  <p></p>
+
+  <input type="radio" id="10px" name="grup" value="10px" checked="true">
+  <label for="10px">10px</label><br>
+  <input type="radio" id="20px" name="grup" value="20px">
+  <label for="20px">20px</label><br>
+  <input type="radio" id="30px" name="grup" value="30px">
+  <label for="30px">30px</label><br>
+  <input type="radio" id="40px" name="grup" value="40px">
+  <label for="40px">40px</label><br>
+  <input type="radio" id="50px" name="grup" value="50px">
+  <label for="50px">50px</label><br>
+
+</body>
+
+</html>

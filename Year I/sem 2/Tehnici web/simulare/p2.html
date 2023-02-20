@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>P2</title>
+  <style>
+    .buton{
+      border: black dotted 3px;
+      position: absolute;
+    }
+    body{
+      height: 700px;
+      width: 900px;
+      border: black solid 3px;
+    }
+  </style>
+  <script>
+    var btnid = 1;
+    window.onload = function(){
+      var body = document.getElementsByTagName('body')[0];
+      body.onclick = function (event){
+        var btn = document.createElement("button");
+        btn.className = "buton";
+        var rand_r = Math.floor(Math.random() * (256)).toString(16), rand_g = Math.floor(Math.random() * (256)).toString(16), rand_b = Math.floor(Math.random() * (256)).toString(16);
+        if (rand_r.length < 2) {
+          rand_r = '0' + rand_r;
+        }
+        if (rand_g.length < 2) {
+          rand_g = '0' + rand_g;
+        }
+        if (rand_b.length < 2) {
+          rand_b = '0' + rand_b;
+        }
+        var buttonColor = "#" + rand_r + rand_g + rand_b;
+        btn.id = (btnid++).toString();
+        btn.innerHTML = 'buton';
+        btn.style.backgroundColor = buttonColor;
+        btn.style.top = event.clientY.toString() + "px";
+        btn.style.left = event.clientX.toString() + "px";
+        btn.onclick = function (ev) {
+          body.style.backgroundColor = buttonColor;
+          btn.innerHTML = btn.id;
+          ev.stopPropagation();
+        }
+        body.appendChild(btn);
+      }
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

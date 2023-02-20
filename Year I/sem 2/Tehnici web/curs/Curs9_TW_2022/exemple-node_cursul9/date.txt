@@ -1,0 +1,3 @@
+Ana,11,Bucuresti
+Mihai,18,Cluj
+Gabriel,18,Brasov

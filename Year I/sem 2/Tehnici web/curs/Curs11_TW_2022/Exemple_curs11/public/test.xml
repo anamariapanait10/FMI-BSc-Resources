@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persoane> 
+  <pers nume="Ion" varsta = "40"></pers> 
+  <pers nume="Maria" varsta ="30"></pers> 
+ </persoane>

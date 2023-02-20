@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>P1</title>
+
+<style>
+  #parinte{
+    height: 150px;
+    width: 50vw;
+    display: grid;
+    grid-template-areas: "d1 . d2"". d3 .""d4 d4 d4";
+    border: solid black 2px;
+  }
+  #parinte > div{
+    border: black dotted 2px;
+  }
+  #d1{
+    grid-area: d1;
+  }
+  #d2{
+    grid-area: d2;
+  }
+  #d3{
+    grid-area: d3;
+  }
+  #d4{
+    grid-area: d4;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    #parinte{
+      grid-template-areas: "d3 d3 d3""d3 d3 d3""d3 d3 d3";
+    }
+    #d1, #d2, #d4 {
+      display: none;
+
+    }
+    body{
+      animation-name: schimba;
+      animation-duration: 1s;
+      animation-direction: alternate-reverse;
+      animation-iteration-count: infinite;
+    }
+    @keyframes schimba {
+      from {background-color: white;}
+      to {background-color: yellow;}
+    }
+  }
+
+</style>
+
+</head>
+<body>
+
+<div id="parinte">
+  <div id="d1">1</div>
+  <div id="d2">2</div>
+  <div id="d3">3</div>
+  <div id="d4">4</div>
+</div>
+
+</body>
+</html>

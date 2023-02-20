@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>P3</title>
+  <style>
+  </style>
+  <script>
+    window.onload = function () {
+      var input = document.getElementById("cifre");
+      if(localStorage.getItem("nr")){
+        input.value = localStorage.getItem("nr");
+      }
+    }
+    window.onkeydown = function (event){
+      var input = document.getElementById("cifre");
+      if (event.key > '0' && event.key < '9'){
+        input.value += event.key;
+        localStorage.setItem("nr", input.value.length.toString());
+      }
+      else if((event.key >= 'a' && event.key <='z') ||
+        (event.key >= 'A' && event.key <='Z')) {
+        var int = setInterval(function () {
+          if(input.value.length > 0) {
+            input.value = input.value.substring(1);
+          }
+          else {
+            clearInterval(int);
+          }
+          localStorage.setItem("nr", input.value.length.toString());
+        }, 3000);
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <input type="button" id="cifre">
+</body>
+</html>

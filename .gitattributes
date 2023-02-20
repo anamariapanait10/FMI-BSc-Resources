@@ -1,0 +1,6 @@
+2/Baze filter=lfs diff=lfs merge=lfs -text
+de filter=lfs diff=lfs merge=lfs -text
+date/laborator/sqldeveloper.zip filter=lfs diff=lfs merge=lfs -text
+Year filter=lfs diff=lfs merge=lfs -text
+I/sem filter=lfs diff=lfs merge=lfs -text
+Year[[:space:]]I/sem[[:space:]]2/Baze[[:space:]]de[[:space:]]date/laborator/sqldeveloper.zip filter=lfs diff=lfs merge=lfs -text

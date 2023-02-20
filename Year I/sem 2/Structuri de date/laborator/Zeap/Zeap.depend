@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652016235 source:c:\users\ana\desktop\fmi\year i\sem 2\structuri de date\laborator\zeap\main.cpp
+	<fstream>
+	<set>
+

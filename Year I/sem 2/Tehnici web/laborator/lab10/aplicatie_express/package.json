@@ -1,0 +1,17 @@
+{
+  "name": "aplicatie_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "move": "^0.4.9",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.16"
+  }
+}

@@ -1,3 +1,9 @@
+## Professors:
+course - Paun Andrei
+seminar - Negru Maria
+laboratory - Manea Andrei Alexandru
+
+## Useful links:
 
 Laboratory:
 Grade: 3 projects -> 3.5 (easy), 4p (medium), 4.5p (hard)

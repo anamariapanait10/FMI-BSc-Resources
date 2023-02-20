@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P2</title>
+
+  <style>
+    body{
+      height: 300px;
+      width: 500px;
+      border: blue double 1px;
+    }
+    .buton{
+      border: dotted black 3px;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+        var indice = 0;
+        window.onclick=function(event){
+          var btn = document.createElement("btn");
+          btn.className = "buton";
+          indice++;
+          btn.innerHTML = "Buton "+indice;
+          var culoare = "rgb("+Math.floor(Math.random() * 256)+", "
+          +Math.floor(Math.random() * 256)+", "
+          +Math.floor(Math.random() * 256)+ ")";
+          btn.style.backgroundColor = culoare;
+          btn.style.position = 'fixed';
+          btn.style.left = event.clientX + 'px';
+          btn.style.top = event.clientY + 'px';
+          btn.onclick=function(event){
+            document.body.style.backgroundColor = this.style.backgroundColor;
+            this.innerHTML = this.innerHTML.split(" ")[1];
+            event.stopPropagation();
+          }
+          document.body.appendChild(btn);
+        }
+    }    
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

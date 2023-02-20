@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+.dreptunghi {
+    border: dotted blue 1px;
+    width: 70px;
+    height: 30px;
+    background-color: aqua;
+    display: inline-block;
+    margin-left: 10px;
+}
+    
+</style>
+
+<script>
+
+window.onload = function(){
+    for(var i = 0; i < 10; i++){
+        var div = document.createElement("div");
+        document.body.appendChild(div);
+        div.innerHTML = "div " + (i + 1);
+        div.classList.add("dreptunghi");
+        var initial = parseInt(window.getComputedStyle(div).height);
+        div.onclick = function(event){
+            if (this.style.height != ""){
+                var current = parseInt(this.style.height)+10;
+                this.style.height = current + 'px';
+            } else {
+                this.style.height = initial + 10 + 'px';
+            }
+            event.stopPropagation();
+        }
+    }
+
+    document.body.onclick=function(){
+        var divs = document.getElementsByClassName("dreptunghi");
+        for(div of divs){
+            div.style.height = initial + 'px';
+        }
+    }
+}
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

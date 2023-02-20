@@ -1,0 +1,74 @@
+-Referinta este un alt NUME pentru variabila pe care o refera
+
+-Alegerea la apel a unei functi supraincarcate (cu acelasi nume) se face in 3 pasi
+  pas1. Potrivire exacta
+  pas2. Conversie fara pierderi
+  pas3. Conversie cu pierderi
+
+-Intr-o functie parametrul transmis prin referinta este un alt nume pentru parametrul actual (ar trebui sa fie zona de memorie)
+-Intr-o functie rezultatul transmis prin referinta este un alt nume pentru rezultat (nu ar trebui sa fie zona rezervata pe stiva ) 
+
+-Obiectul implicit al unei metode este obiectul care apeleaza metoda (this este adresa obiectului implicit)
+
+- Operatorii =,(),[] se pot supraincarca doar ca metode 
+
+-Orice clasa are implicit date de compilator -un constructor de initializare, un constructor de copiere ,un operator =, un destructor
+-Constructorul se apeleaza cand se ALOCA (explicit (new) sau implicit (la declarare)) zona pentru un obiect.
+   (La alocarea de zona pentru un vector de obiecte  se apeleaza constructorul pentru fiecare element al vectorului )
+   (Nu se apeleaza constructorul la declarare de pointer sau declarare de referinta)
+-Constructorul de copiere se apeleaza cand este alocata zona pt un obiect si este si initializat cu datele unui alt obiect deja creat
+-Constructorul de copiere se mai apeleaza - la functiile care transmit parametrii  prin valoare (se creaza o copie a parametrului actual)
+			          - la functiile care intorc rezultatul prin valoare (se creaza o copie a rezultatului )
+- Constructorul de copiere dat de compilator copiaza in obiectul implicit datele obiectului parametru -bit cu bit 
+-Operatorul= se apeleaza la atribuire intre 2 obiecte deja create
+-Operatorul = dat de compilator copiaza in obiectul implicit datele obiectului parametru -bit cu bit
+-Destructorul se apeleaza cand zona alocata obiectului este eliberata (explicit (delete) sau de catre sistem (se iese din blocul in care a fost definit))	
+
+-Daca se declara un constructor de initializare -compilatorul nu mai asigura un constructorul de initializare 
+-Daca se declara un constructor de copiere -compilatorul nu mai asigura nici constructor de initializare  si nici constructor de copiere
+
+-Pentru crearea unui obiect din clasa derivata -se apeeaza intai constructorul clasei de baza , apoi constructorul clasei derivate (destructorii -invers)
+-Pentru crearea unui obiect dintr-o clasa compusa -se apeleaza intai constructorul pentru datele membre si apoi contructorul clasei compuse (destructorii invers)
+
+-Constructorul de copiere dat de compilator in clasa derivata apeleaza implicit constructorul de copiere al bazei
+-Constructorul de copiere definit de programator apeleaza implicit constrctorul de INITIALIZARE al bazei
+
+-Pentru BAZA datele private sunt similare cu cele protected. Datele private din Baza devin inaccesibile(direct) pentru  obiectele Derivate.
+ Datele protected din Baza pot fi accesate  de  obiectele Derivate.
+  Intr-o metoda a Derivatei pot accesa o data (protected in Baza) a unui obiect din Derivata.
+  Intr-o metoda a Derivatei NU pot accesa o data (protected in Baza) a unui obiect din Baza.
+
+-La derivare, o metoda din baza poate fi acoperite de o metoda redefinita in derivata (cu acelasi antet/ cu tip sau nr diferit de parametrii/cu tip intors diferit  )
+
+-In pointer la BAZA se poate pune adresa unui obiect din DERIVATA (doar daca derivarea este publica -altfel s-ar putea accesa prin pointerul la baza elemente neaccesibile obiectului din derivata)
+-O referinta la BAZA  poate  fi un alt nume pentru un obiect din DERIVATA (doar daca derivarea este publica -altfel s-ar putea accesa prin pointerul la baza elemente neaccesibile obiectului din derivata)
+-Prin pointerul (referinta ) la BAZA se pot accesa doar elementele care apar in BAZA. 
+
+-Metodele virtuale sunt evaluate la EXECUTIE (din clasa din care face parte obiectul -care are atasata informatie suplimentara). 
+-Metodele nevirtuale se evalueza la COMPILARE (din clasa din care face parte variabila prin care se acceseaza -pointer, referinta, obiect )
+
+-La template alegerea functiilor e facuta in 2 pasi:
+   pas 1 potrivire FARA CONVERSIE prioritate  varianta non-template, apoi template fara parametrii, apoi template cu 1 parametru , apoi template cu mai multi parametrii
+   pas 2 daca nu se poate pas 1- conversie DOAR la varianta non-template 
+
+ const tip *cp ; este pointer care protejeaza zona;  
+ tip* const pc=&var;   este pointer constant -nu va adresa alta zona;
+ const tip & cr=var ; este referinta care protejeaza zona;
+
+-Datele statice trebuiesc redeclarate dupa definirea clasei pentru a li se aloca zona de memorie. 
+Sunt create INAINTEA oricarui obiect si initilizate implicit cu 0 (sau explicit).
+-Metodele statice nu au pointer THIS deci nu pot accesa decat date statice (sau datele nestatice ale unui anumit obiect)
+
+-Datele constante pot fi initiaizate DOAR in lista de initializare a constructorului , NU in constructor.
+-Metodele constante sunt metode care nu modifica datele obiectului implicit. La metodele constante pointerul this este transmis ca pointer care protejeaza zona. 
+Metodele const au declaratia const DUPA lista de parametrii.
+
+-Obiectele constante pot apela doar metode constante. Prin pointeri (referinte) care protejeaza zona se pot apela doar metode constante care si ele protejeaza zona.
+ 
+-Cand se converteste pointer la Baza la pointer la Derivata cu dynamic_cast este nevoie de prezenta metodelor virtuale care adauga informatie suplimentara obiectelor.
+
+-La RTTI -pointerul la Baza va fi vazut mereu ca pointer la Baza chiar daca contine adresa unui obiect din Derivata.
+-La RTTI -pentru identificare corecta este nevoie de prezenta metodelor virtuale care adauga informatie obiectelor -altfel este vizibila doar evaluarea de la compilare.
+
+- La aruncarea exceptiilor NU se face CONVERSIE catre tipul argumentelor din instructiunile catch. 
+Exceptie: obiecte din Derivata sunt prinse de catch cu argument Baza 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>P1</title>
+
+<style>
+  .container{
+    height: 25vh;
+    width: 150px;
+    display: grid;
+    border: solid black 3px;
+    grid-template-areas: "d1 d1 d2""d3 d4 d2""d5 d5 d5";
+  }
+  .container > div{
+    border: blue solid 3px;
+    font-size: 10px;
+    margin: 2px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #d1{
+    grid-area: d1;
+  }
+  #d2{
+    grid-area: d2;
+  }
+  #d3{
+    grid-area: d3;
+  }
+  #d4{
+    grid-area: d4;
+  }
+  #d5{
+      grid-area: d5;
+  }
+
+  @media screen and (max-width: 600px) and (max-height:500px) {
+    .container{
+      background-color: red;
+      display: grid;
+      grid-template-areas: "d5 d5 d5""d4 d4 d4""d3 d3 d3""d2 d2 d2""d1 d1 d1";
+    }
+    .container > div{
+      text-align: center;
+      vertical-align: middle;
+    }
+    #d1{
+      grid-area: d1;
+    }
+    #d2{
+      grid-area: d2;
+    }
+    #d3{
+      grid-area: d3;
+    }
+    #d4{
+      grid-area: d4;
+    }
+    #d5{
+        grid-area: d5;
+    }
+    .container :nth-of-type(odd){
+      transition: font-size 2s;
+    }
+    .container :nth-of-type(odd):hover{
+      font-size: 30px;
+    }
+
+  }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <div id="d1">Div 1</div>
+  <div id="d2">Div 2</div>
+  <div id="d3">Div 3</div>
+  <div id="d4">Div 4</div>
+  <div id="d5">Div 5</div>
+</div>
+
+</body>
+</html>

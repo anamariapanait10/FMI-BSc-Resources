@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P3</title>
+  <script>
+    window.onload = function(){
+      var nr = localStorage.getItem("nr_cifre");
+      var btn = document.getElementById("cifre");
+      if(nr){
+        btn.value = nr;
+      }
+      window.onkeydown=function(event){ 
+        if("0123456789".includes(event.key)){
+          btn.value += event.key;
+          localStorage.setItem("nr_cifre", ""+btn.value.length);
+        }
+        if("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM".includes(event.key)){
+          var int = setInterval(function(){
+            var text = btn.value;
+            var gasit = false;
+            for(var i = 0; i < text.length; i++){
+              if("0123456789".includes(text[i])){
+                text = text.substring(1,text.length);
+                btn.value = text;
+                gasit = true;
+                break;
+              }
+            }
+            if(!gasit){
+              localStorage.setItem("nr_cifre", ""+btn.value.length);
+              clearInterval(int);
+            }
+          }, 3000);
+        }
+      }
+    }
+    
+  </script>
+
+</head>
+
+<body>
+  <input type="button" id="cifre">
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>P1</title>
+
+<style>
+  #container{
+    height: 25vh;
+    width: 250px;
+    border: blue dotted 2px;
+    display: grid;
+    grid-template-areas:"d1 d1 d2 d2"". d3 d3 .""d4 d4 d5 d5";
+  }
+  #container > div{
+    border: black double 6px;
+    font-size: 10px;
+  }
+  #d1{
+    grid-area: d1;
+  }
+  #d2{
+    grid-area: d2;
+  }
+  #d3{
+    grid-area: d3;
+  }
+  #d4{
+    grid-area: d4;
+  }
+  #d5{
+    grid-area: d5;
+  }
+
+  @media screen and (max-width: 600px) and (max-height:500px) {
+    #container{
+      display: flex;
+      flex-direction: column-reverse;
+      
+    }
+    #container div{
+      transition: all 3s;
+      transition-property: font-size, border;
+    }
+    #container div:hover{
+      font-size: 20px;
+      border: red double 6px;
+    }
+  }
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+  <div id="d1">Div 1</div>
+  <div id="d2">Div 2</div>
+  <div id="d3">Div 3</div>
+  <div id="d4">Div 4</div>
+  <div id="d5">Div 5</div>
+</div>
+
+</body>
+</html>

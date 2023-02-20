@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>P1</title>
+  <style>
+    .box {
+      height: 200px;
+      width: 2/3vw;
+      display: grid;
+      grid-template-areas: 'd1 d1 d1 d1''d2 d2 d3 d3''. d4 d4 .';
+    }
+
+    div>div {
+      border: green double 6px;
+    }
+
+    div:nth-child(1) {
+      grid-area: d1;
+    }
+
+    div:nth-child(2) {
+      grid-area: d2;
+    }
+
+    div:nth-child(3) {
+      grid-area: d3;
+    }
+
+    div:nth-child(4) {
+      grid-area: d4;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 550px) {
+
+      #div1,
+      #div4 {
+        display: none;
+      }
+
+      div:nth-child(2),
+      div:nth-child(3) {
+        animation-name: schimba_culoarea;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes schimba_culoarea {
+        0% {
+          border-color: green;
+        }
+
+        50% {
+          border-color: blue;
+        }
+
+        100% {
+          border-color: red;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div id="div1">Div1</div>
+    <div>Div2</div>
+    <div>Div3</div>
+    <div id="div4">Div4</div>
+  </div>
+</body>
+
+</html>

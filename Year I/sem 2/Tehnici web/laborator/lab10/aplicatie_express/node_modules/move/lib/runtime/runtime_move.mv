@@ -1,0 +1,219 @@
+# Move runtime library
+
+# A few things that need to be defined in order for this very module to compile
+_MoveKWArgsT = global.Move.runtime._MoveKWArgsT
+
+# -----------------------------------------------------------------------------
+# ES5 compatibility
+
+/*if (typeof global == 'undefined' || global.global != global) {
+  if (typeof window == 'object')
+    window.global = window
+  else
+    this.global = this
+}*/
+
+IS_KNOWN_ES5_HOST = !!(typeof process != 'undefined' &&
+                     ((typeof process.versions == 'object' &&
+                       process.versions.node) ||
+                      process.pid))
+
+if (!IS_KNOWN_ES5_HOST) {
+  require './es5_object'
+  require './es5_array'
+  require './es5_date'
+  require './es5_json'
+}
+
+# -----------------------------------------------------------------------------
+# Additions
+
+require './runtime_object'
+require './runtime_string'
+require './runtime_date'
+require './runtime_array'
+
+# -----------------------------------------------------------------------------
+# Constants
+
+# _MoveKWArgsT is a unique object used to test for and prevent tampering with
+# keyword arguments
+Object.defineConstant exports, '_MoveKWArgsT', _MoveKWArgsT, true
+
+# String is aliased as Text
+Object.defineConstant exports, 'Text', String, true
+Object.defineConstant String.prototype, 'toText', String.prototype.toString
+
+# -----------------------------------------------------------------------------
+# Base library functions
+
+# extend (object, {member1: value1, ...}[, bool onlyOwnProperties]) -> object
+# extend (object) -> object (no-op)
+export extend = ^(object, body, onlyOwnProperties) {
+  T = body == null ? 'undefined' : typeof body
+  if (T == 'object' || T == 'function') {
+    Object.prototype.forEach.call body, ^(key, value) {
+      if (value != undefined && value != _MoveKWArgsT)
+        object[key] = value
+    }, null, onlyOwnProperties
+  } else if (T != 'undefined') {
+    throw new TypeError(
+      '"body" argument must be either an object or a function, not a '+T)
+  }
+  object
+}
+
+# create (prototype, {member1: value1, ...}) -> object
+# create (prototype) -> object
+export create = ^(prototype, body) {
+  extend Object.create(prototype), body
+}
+
+/*# Inherit the prototype methods from one constructor into another.
+#
+# The Function.prototype.inherits from lang.js rewritten as a standalone
+# function (not on Function.prototype). NOTE: If this file is to be loaded
+# during bootstrapping this function needs to be revritten using some native
+# functions as prototype setup using normal JavaScript does not work as
+# expected during bootstrapping (see mirror.js in r114903).
+#
+# @param {function} ctor Constructor function which needs to inherit the
+#     prototype.
+# @param {function} superCtor Constructor function to inherit prototype from.
+#
+export inherit = function(ctor, superCtor) {
+  ctor.super_ = superCtor
+  ctor.prototype = Object.create superCtor.prototype, {
+    constructor: { value: ctor, enumerable: false }
+  }
+  ctor
+};*/
+
+# inspect (value) -> string
+if (typeof Object.inspect != 'function') {
+  try {
+    # Use an existing implementation if available
+    Object.inspect = require('util').inspect
+    if (typeof Object.inspect != 'function') throw 1
+  } catch (e) {
+    # Load our implementation
+    Object.inspect = require('./runtime_inspect').inspect
+  }
+}
+
+# Print something (e.g. to a console or other output)
+# print ...
+if (typeof console != 'undefined' && console.log) {
+  if (typeof window != 'undefined') {
+    # In a browser setting we use eval, and eval has the restriction that
+    # no code executed can directly reference native objects, thus we wrap
+    # console.log in a lambda
+    exports.print = ^{
+      console.log.apply console, Array.prototype.slice.call arguments
+    }
+  } else {
+    exports.print = console.log
+  }
+} else {
+  # As a last resort, make print a no-op
+  exports.print = ^{}
+}
+
+# dprint implementation
+exports.dprinter = ^(module) {^{
+  exports.print.apply null, ['['+module.id+']'].concat Array.prototype.slice.call arguments
+}}
+
+# Repeat a `block`...
+#
+# - `times: N` -- repeat `block` *N* times
+#
+# If called with shorthand single argument, `block` is repeated until it returns
+# a false value
+export repeat = ^(times, every, block) {
+  if (typeof times == 'function') {
+    # short-hand call style
+    while (true) if (!times()) break
+    return
+  }
+  if (typeof block == 'function') {
+    if (times != undefined) {
+      for (i=0; i < times; ++i) if (block(i) == true) break
+    } else if (every != undefined) {
+      timer = Object.create({}, {cancel:{value:^{ clearInterval @id }}})
+      timer.id = setInterval ^{ block timer }, every
+      return timer
+    } else {
+      while (true) if (!block()) break
+    }
+  } else {
+    return ^(block){
+      if (times != undefined) {
+        for (i=0; i < times; ++i) if (block(i) == true) break
+      } else if (every != undefined) {
+        timer = Object.create({}, {cancel:{value:^{ clearInterval @id }}})
+        timer.id = setInterval ^{ block timer }, every
+        return timer
+      } else {
+        while (true) if (!block()) break
+      }
+    }
+  }
+}
+
+# Perform a `block` after a delay or date/time
+export after = ^(delay, date, target) {
+  if (delay) {
+    #if (arguments.)...
+    if (typeof delay != 'number')
+      throw new TypeError('"delay" argument must be a number')
+  } else if (date) {
+    if (typeof date == 'string' || typeof date == 'number') {
+      date = new Date(date)
+      if (isNaN(date.getTime()))
+        throw new Error('Invalid date/time passed for "date" argument')
+    } else if (typeof date != 'object' || !(date instanceof Date)) {
+      throw new TypeError('"date" argument must be a Date object or a string')
+    }
+    delay = Math.max(0, date.getTime() - (new Date).getTime())
+  }
+  return ^(block) {
+    if (target) {
+      b = ^{ block.apply target, arguments }
+    } else {
+      b = block
+    }
+    setTimeout b, delay
+  }
+}
+
+# -----------------------------------------------------------------------------
+# Keyword variants of common stuff
+
+
+# JSON value -> string
+# JSON {build:value} -> string
+# JSON {parse:string} -> value
+# JSON.stringify value -> string
+# JSON.parse string -> value
+JSON = global.JSON
+_JSON = ^(build, parse) {
+  if (build != undefined || parse == undefined)
+    JSON.stringify(build)
+  else
+    JSON.parse(parse)
+}
+# To retain compatibility with the standard JSON object interface
+_JSON.parse = JSON.parse
+_JSON.stringify = JSON.stringify
+exports.JSON = _JSON
+
+
+# Export our API as the Move runtime API
+global.Move.runtime = exports
+
+# class
+exports.__class = require('./runtime_class').__class
+
+# EventEmitter
+exports.EventEmitter = require('./runtime_events').EventEmitter
