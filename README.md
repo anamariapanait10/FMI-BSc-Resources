@@ -6,7 +6,7 @@ other useful resources for Computer Science students at the University of Buchar
 
 ## Content
 
-### First year 2021-2022
+### [First year 2021-2022](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I)
 #### First semester
 
 | Discipline                                       | Credits |
