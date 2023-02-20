@@ -9,7 +9,7 @@ Laboratory:
 Grade: 3 projects -> 3.5 (easy), 4p (medium), 4.5p (hard) \
 A 0.5p bonus is awarded for each project for clean code (identation, nice writing etc.).
 
-Proiectul 1 (individual, maxim 6 studenti/proiect din grupa)
+#### Proiectul 1 (individual, maxim 6 studenti/proiect din grupa)
 Deadline ~ saptamana 7-8 \
 Sa se scrie un algoritm care are ca input un <placeholder> si o lista de string-uri. Sa se afiseze DA/NU pentru fiecare cuvant si un traseu/drum in automat (cel putin pentru primul), daca este acceptat sau nu. Unde <placeholder>:
 1. automat finit determinist (DFA)
@@ -18,10 +18,7 @@ Sa se scrie un algoritm care are ca input un <placeholder> si o lista de string-
 4. automat Meale
 5. automat Moore
 
- 
-
-
-Proiectul 2 (maxim 6 studenti/proiect)
+#### Proiectul 2 (maxim 6 studenti/proiect)
 Deadline ~ saptamana 11-12
 1. transformarea unui lambda-NFA -> DFA
 2. transformare din Regex in automat (nu neaparat determinist)
@@ -30,9 +27,7 @@ Deadline ~ saptamana 11-12
 5. automatul minimal (DFA-ul)
 
  
-
-
-Proiectul 3 (maxim 10 studenti/proiect) \
+#### Proiectul 3 (maxim 10 studenti/proiect)
 Deadline ~ saptamana 14 -> maxim 2 zile inainte de examen
 1. Algoritmul CYK
 2. transformare gramatica independenta de context in PDA si rularea unui input in PDA (https://www.javatpoint.com/automata-cfg-to-pda-conversion?fbclid=IwAR1XfICRHd2jJKGthjFKJR3Fn9_-heTf-Hl47DOJNiMxRWCNuge3bODSb9w)
