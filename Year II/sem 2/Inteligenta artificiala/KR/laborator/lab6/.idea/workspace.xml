@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31e9e879-6b30-4765-a697-1de261075103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab1/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2.py/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2.py/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab4/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab4/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab5/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Metode de dezvoltare software/Petbook/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Metode de dezvoltare software/Petbook/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Year I/sem 1/Arhitectura sistemelor de calcul/proiecte/Proiect_ASC" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Year I/sem 1/Arhitectura sistemelor de calcul/proiecte/Proiect_ASC" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Year I/sem 2/Structuri de date/laborator/red_black_tree" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Year I/sem 2/Structuri de date/laborator/red_black_tree" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NkO8qaclmpNGNbNvce0bRiO5D0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="lab6" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31e9e879-6b30-4765-a697-1de261075103" name="Changes" comment="" />
+      <created>1680204456201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680204456201</updated>
+      <workItem from="1680204461810" duration="3456000" />
+      <workItem from="1680256270885" duration="2919000" />
+      <workItem from="1680260034706" duration="34000" />
+      <workItem from="1680717201079" duration="3612000" />
+      <workItem from="1680812776286" duration="4726000" />
+      <workItem from="1680865623549" duration="107000" />
+      <workItem from="1680872563092" duration="2366000" />
+      <workItem from="1681105298711" duration="180000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab6$main.coverage" NAME="main Coverage Results" MODIFIED="1681105468714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
