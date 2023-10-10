@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1669366268 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema3\ciclu\main.cpp
+	<fstream>
+	<vector>
+	<climits>
+	<queue>
+	<iomanip>
+

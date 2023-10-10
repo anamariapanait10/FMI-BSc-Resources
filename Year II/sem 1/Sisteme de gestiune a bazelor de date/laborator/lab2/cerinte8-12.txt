@@ -1,0 +1,84 @@
+Tema 2 - continuare
+
+8) Toate filmele rezervate au fost împrumutate la data rezervării? Afișați textul “Da” sau ”Nu” în funcție de situație. 
+
+select 
+    case when 
+        (select count(*) 
+        from rental ren, reservation res
+        where ren.member_id = res.member_id and ren.title_id = res.title_id and ren.book_date != res.res_date) > 0
+    then 'NU' 
+    else 'DA' 
+    end
+from dual;
+
+9) De câte ori a împrumutat un membru (nume și prenume) fiecare film (titlu)?
+
+var 1 – fara produs cartezian
+
+select m.first_name ||' '|| m.last_name as "Nume", t.title as "Titlu", count(*) as "Imprumuturi"
+from member m, rental ren, title t
+where m.member_id = ren.member_id and ren.title_id = t.title_id
+group by ren.title_id, t.title, m.first_name, m.last_name;
+
+var 2 – cu produs cartezian
+with filme_imprumutate as 
+(
+    select t.title_id, m.member_id, count(*) nr_imp
+    from member m, rental ren, title t
+    where m.member_id = ren.member_id and ren.title_id = t.title_id
+    group by ren.title_id, t.title, m.first_name, m.last_name
+)
+select m.first_name ||' '|| m.last_name as "Nume", t.title as "Titlu", m.member_id, t.title_id, nvl((select nr_imp from filme_imprumutate where
+    (t.title_id = filme_imprumutate.title_id and m.member_id = filme_imprumutate.member_id)), 0) as "Imprumuturi"
+from member m, title t order by 1;
+
+10) De câte ori a împrumutat un membru (nume si prenume) fiecare exemplar (cod) al unui film (titlu)?
+
+select m.first_name ||' '|| m.last_name as "Nume", ren.copy_id as "Cod", t.title as "Titlu", count(t.title_id) "Imprumutari"
+from member m, rental ren, title t
+where m.member_id = ren.member_id and ren.title_id = t.title_id
+group by ren.copy_id, t.title, m.first_name, m.last_name;
+
+11) Obtineti statusul celui mai des împrumutat exemplar al fiecarui film (titlu).
+with nr_rentals as
+(   select r.copy_id, r.title_id, count(*) cnt
+    from rental r
+    group by r.title_id, r.copy_id
+)
+select tc.copy_id as "Id exemplar", t.title as "Titlu", tc.status as "Status" 
+from title_copy tc, title t, rental r
+where t.title_id=tc.title_id and t.title_id=r.title_id and tc.copy_id=r.copy_id
+group by t.title_id, tc.status, tc.copy_id, t.title
+having count(r.copy_id) = (select max(cnt) from nr_rentals
+						where nr_rentals.title_id=t.title_id)
+						order by t.title_id;            
+
+12) Pentru anumite zile specificate din luna curenta, obtineti numarul de împrumuturi efectuate.
+a) Se iau în considerare doar primele 2 zile din luna.
+select distinct(to_char(book_date)), count(r.book_date) as "Imprumuturi"
+from rental r
+where extract(month from book_date) = extract(month from sysdate) and (extract(day from book_date) = 1 or extract(day from book_date) = 2) 
+group by to_char(book_date);
+
+b)
+select to_char(book_date) as "Data", count(*) as "Imprumuturi"
+from rental 
+where extract(month from book_date) = extract(month from sysdate) 
+group by to_char(book_date);
+
+c)
+
+with dates as
+(   
+    select trunc (last_day(sysdate) - rownum + 1) dt
+    from dual connect by rownum <= extract(day from last_day(sysdate))
+)
+select dt, (
+    select count(*) 
+    from rental where 
+    extract(day from book_date) = extract(day from dt)
+    and extract(month from book_date) = extract(month from dt))  as "Imprumuturi"
+from dates
+order by 1;
+

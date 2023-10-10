@@ -1,0 +1,64 @@
+﻿@model PanaitAnaM32.Models.Ticket
+
+
+@if (ViewBag.Message != null)
+{
+    <h2 class="alert-danger p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+<h2 class="text-center mt-5">Adaugare programare</h2>
+<br />
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            @using (Html.BeginForm(actionName: "New", controllerName: "Tickets",
+            method: FormMethod.Post))
+            {
+
+                @Html.Label("TitluBilet", "Titlu bilet")
+                <br />
+                @Html.TextBox("TitluBilet", null, new {  @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.TitluBilet, null, new { @class = "text-danger" })
+                <br />
+                <br />
+
+                @Html.Label("Pret", "Pretul biletului")
+                @Html.TextBox("Pret", null, new { @class = "form-control" })
+                @Html.ValidationMessage("Pret", null, new { @class = "text-danger" })
+                <br />
+                <br />
+
+                @Html.Label("Data", "Data biletului")
+                <input asp-for="@Model.Data" class="form-control" />
+                @Html.ValidationMessageFor(m => m.Data, null, new { @class = "text-danger" })
+                <br />
+                <br />
+
+
+                <label>Selectati filmul</label>
+                @Html.DropDownListFor(m => m.MovieId, new SelectList(Model.Movies, "Value", "Text"),
+            "Selectati filmul", new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.MovieId, null, new { @class = "text-danger" })
+                <br />
+                <br />
+
+
+                <div class="d-flex justify-content-center align-content-center">
+                    <button class="btn btn-success" type="submit">Adauga biletul</button>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

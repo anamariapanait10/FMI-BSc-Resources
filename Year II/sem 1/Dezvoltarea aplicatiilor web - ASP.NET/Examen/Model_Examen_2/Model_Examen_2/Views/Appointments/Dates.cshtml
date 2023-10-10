@@ -1,0 +1,7 @@
+﻿@foreach (var d in ViewBag.Date)
+{
+        <a class="btn btn-success" href="/Appointments/AppsDate/@d.ToString().Replace("/", "_")">@d</a>
+
+    <br />
+    <br />
+}

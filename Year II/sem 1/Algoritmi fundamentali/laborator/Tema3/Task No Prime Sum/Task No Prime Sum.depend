@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1673175204 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\task no prime sum\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<climits>
+

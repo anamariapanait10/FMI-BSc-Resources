@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1673139719 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\maxflow\main.cpp
+	<fstream>
+	<vector>
+	<queue>
+
+1673091554 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\maxflow\maxflow.in.c
+
+1673091562 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\maxflow\maxflow.out.c
+

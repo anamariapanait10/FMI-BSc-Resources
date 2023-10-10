@@ -1,0 +1,12 @@
+
+id a := a ;
+const x y := x ;
+flip f x y := f y x ;
+. g f x := g (f x) ;
+
+true f t := t ;
+false f t := f ;
+bool f t b := b f t ;
+
+ite b t e := bool e t b ;
+

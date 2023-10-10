@@ -1,0 +1,25 @@
+﻿@model ArticlesApp.Models.Category
+
+
+@{
+    ViewBag.Title = "Adaugare Categorie";
+}
+
+
+<h2>Adaugare Categorie</h2>
+
+@using (Html.BeginForm(actionName: "New", controllerName: "Categories", method: FormMethod.Post))
+{
+
+    @Html.Label("CategoryName", "Denumire categorie")
+    <br />
+
+    @Html.TextBox("CategoryName", null, new { @class = "form-control" })
+
+    @Html.ValidationMessageFor(m => m.CategoryName, null, new { @class = "text-danger" })
+    <br /><br />
+
+    <button class="btn btn-success" type="submit">Adauga categorie</button>
+
+}
+
