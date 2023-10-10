@@ -1,0 +1,13 @@
+﻿<h2>Afisare articole</h2>
+<br />
+@foreach (var art in ViewBag.Articole)
+{
+    <p>@art.Title</p>
+    <p>@art.Content</p>
+    <p>@art.Date</p>
+    <br />
+    <a href="/Articles/Show/@art.ArticleID">Afisare articol</a>
+    <br />
+    <a href="/Articles/Edit/@art.ArticleID">Editare articol</a>
+    <hr />
+}

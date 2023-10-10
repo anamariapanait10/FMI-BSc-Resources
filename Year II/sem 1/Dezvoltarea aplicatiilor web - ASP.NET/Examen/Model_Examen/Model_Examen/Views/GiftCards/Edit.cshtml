@@ -1,0 +1,71 @@
+﻿@model Model_Examen.Models.GiftCard
+
+
+@if (ViewBag.Message != null)
+{
+    <h2 class="alert-danger p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+<h2 class="text-center mt-5">Editare articol</h2>
+<br />
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            @using (Html.BeginForm(actionName: "Edit", controllerName: "GiftCards",
+                   method: FormMethod.Post,
+                   routeValues: new { id = Model.Id }))
+            {
+
+                @Html.Label("Denumire", "Titlu GiftCard")
+                    <br />
+                @Html.TextBoxFor(m => m.Denumire, null, new {  @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.Denumire, null, new { @class = "text-danger" })
+                    <br />
+
+                <br />
+
+                @Html.Label("Descriere", "Continut GiftCard")
+                    <br />
+                @Html.TextArea("Descriere", Model.Descriere, new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.Descriere, null, new { @class = "text-danger" })
+                 <br />
+
+                <br />
+
+                <input asp-for="@Model.DataExp" class = "form-control"/>
+     
+                <br />
+                <br />
+     
+
+                @Html.Label("Procent", "Procent redurecere gift card")
+                        <br />
+                @Html.TextBoxFor(m => m.Procent, null, new { @class = "form-control" })
+                @Html.ValidationMessage("Procent", null, new { @class = "text-danger" })
+                        <br />
+                        <br />
+
+                <label>Selectati brandul</label>
+                @Html.DropDownListFor(m => m.BrandId, new SelectList(Model.Brands, "Value", "Text"),
+                "Selectati bandul", new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.BrandId, null, new { @class = "text-danger" })
+                    <br />
+
+                <br />
+                <div class="d-flex justify-content-center align-content-center">
+                        <button class="btn btn-success" type="submit">Modifica cardul</button>
+                </div>
+
+                
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

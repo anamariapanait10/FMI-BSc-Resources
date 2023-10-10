@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.field-validation-valid {
+    display: none;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar {
+    background-color: #dfe6e9 !important;
+    border: none !important;
+    box-shadow: 0 3px 12px #636e72 !important;
+}
+
+a.nav-link {
+    color: #2c2c2c !important;
+}
+
+a.nav-link:hover {
+    color: #00b894 !important;
+}
+
+.logoutbtn {
+    color: #2c2c2c !important;
+}
+
+.logoutbtn:hover {
+    color: #00b894 !important;
+}

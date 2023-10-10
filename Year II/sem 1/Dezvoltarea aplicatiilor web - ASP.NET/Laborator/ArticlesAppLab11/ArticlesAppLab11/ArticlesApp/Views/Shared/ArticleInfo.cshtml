@@ -1,0 +1,22 @@
+﻿@model ArticlesApp.Models.Article
+
+
+<div class="card-body">
+
+    <h3 class="card-title alert-success py-3 px-3 rounded-2">@Model.Title</h3>
+
+    <div class="card-text">@Html.Raw(Model.Content)</div>
+
+    <div class="d-flex justify-content-between flex-row mt-5">
+
+        <div><i class="bi bi-globe"></i> @Model.Category.CategoryName</div>
+
+        <div><i class="bi bi-person"></i> @Model.User.UserName</div>
+
+        <span class="alert-success">@Model.Date</span>
+
+    </div>
+
+</div>
+
+

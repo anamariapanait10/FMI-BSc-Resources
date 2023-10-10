@@ -1,0 +1,65 @@
+﻿@model Model_Examen_2.Models.Appointment
+
+
+@if (ViewBag.Message != null)
+{
+        <h2 class="alert-danger p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+
+<h2 class="text-center mt-5">Editare programare</h2>
+<br />
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            @using (Html.BeginForm(actionName: "Edit", controllerName: "Appointments",
+                  method: FormMethod.Post,
+                  routeValues: new { id = Model.Id }))
+            {
+
+                @Html.Label("Info", "Informatii programare")
+                                <br />
+                @Html.TextBox("Info", null, new {  @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.Info, null, new { @class = "text-danger" })
+                                <br />
+
+                            <br />
+
+                @Html.Label("Data", "Data programarii")
+                   <input asp-for="@Model.Data" class = "form-control"/>
+                @Html.ValidationMessageFor(m => m.Data, null, new { @class = "text-danger" })
+
+                            <br />
+                            <br />
+
+
+                @Html.Label("Pret", "Pretul programarii")
+                                    <br />
+                @Html.TextBox("Pret", null, new { @class = "form-control" })
+                @Html.ValidationMessage("Procent", null, new { @class = "text-danger" })
+                                    <br />
+                                    <br />
+
+                    <label>Selectati medicul</label>
+                @Html.DropDownListFor(m => m.DoctorId, new SelectList(Model.Doctori, "Value", "Text"),
+                "Selectati medicul", new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.DoctorId, null, new { @class = "text-danger" })
+                                <br />
+
+                    <br />
+                    <div class="d-flex justify-content-center align-content-center">
+                            <button class="btn btn-success" type="submit">Modifica cardul</button>
+                    </div>
+
+
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

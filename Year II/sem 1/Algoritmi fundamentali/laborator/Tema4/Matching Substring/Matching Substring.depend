@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1674233382 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\matching substring\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	<map>
+

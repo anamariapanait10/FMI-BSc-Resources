@@ -1,0 +1,33 @@
+﻿@model Model_Examen.Models.GiftCard
+
+
+<form method="GET">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search topics or keywords" name="search"
+               value="@ViewBag.SearchString">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </div>
+</form>
+
+@foreach (Model_Examen.Models.GiftCard card in ViewBag.Cards)
+{
+    <div class="card">
+
+        <div class="card-body">
+
+        <h3 class="card-title alert-success py-3 px-3 rounded-2">@card.Denumire</h3>
+
+         <div class="card-text"><b>Data expirare: </b>@card.DataExp</div>
+        <div class="card-text"><b>Procent: </b>@card.Procent %</div>
+        <div><i class="bi bi-globe"></i><b>Brand: </b>@card.Brand.Nume</div>
+        <br />
+
+    </div>
+
+
+
+    </div>
+
+    <br />
+<br />
+}

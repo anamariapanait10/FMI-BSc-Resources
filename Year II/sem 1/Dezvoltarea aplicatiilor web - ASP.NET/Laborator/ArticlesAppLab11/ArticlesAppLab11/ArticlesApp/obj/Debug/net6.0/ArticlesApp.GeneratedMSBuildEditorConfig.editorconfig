@@ -1,0 +1,141 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ArticlesApp
+build_property.RootNamespace = ArticlesApp
+build_property.ProjectDir = C:\Users\Ana\Desktop\FMI\Year II\sem 1\ArticlesAppLab11\ArticlesAppLab11\ArticlesApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Ana\Desktop\FMI\Year II\sem 1\ArticlesAppLab11\ArticlesAppLab11\ArticlesApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Articles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Articles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Articles/IndexNou.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcSW5kZXhOb3UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Articles/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Articles/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Bookmarks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va21hcmtzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Bookmarks/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va21hcmtzXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Bookmarks/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va21hcmtzXFNob3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Categories/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xOZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Categories/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xTaG93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Comments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Shared/ArticleInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFydGljbGVJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Shared/_LayoutNou.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROb3UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Users/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana/Desktop/FMI/Year II/sem 1/ArticlesAppLab11/ArticlesAppLab11/ArticlesApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fzti6j3p16

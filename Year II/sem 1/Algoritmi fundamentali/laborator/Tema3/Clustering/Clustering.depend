@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1669562238 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema3\clustering\main.cpp
+	<fstream>
+	<iostream>
+	<cstring>
+	<vector>
+	<algorithm>
+	<unordered_map>
+
