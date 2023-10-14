@@ -6,4 +6,4 @@
 - [Programare functionala]()                       
 - [Sisteme de operare]()             
 - [Optional de dezvoltarea aplicatiilor web - ASP .NET Core]()
-- [Engleza]()      
+- [Engleza]()
