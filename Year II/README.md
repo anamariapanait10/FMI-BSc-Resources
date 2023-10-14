@@ -1,6 +1,15 @@
 # Year II
 
-### First semester
+<table><tr><th>
+
+[First semester](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20II/sem%201)
+
+</th><th>
+
+[Second semester](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20II/sem%202)
+
+</th></tr>
+<tr><td>
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -12,7 +21,7 @@
 | [Optional Web Application Development - ASP .NET](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%201/Dezvoltarea%20aplicatiilor%20web%20-%20ASP.NET)  |    5    |
 | [Advanced Skills in a Foreign Language I](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%201/Competente%20avansate%20intr-o%20limba%20straina%20I)          |    2    |
 
-### Second semester
+</td><td>
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -23,3 +32,5 @@
 | [Computer Networks](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Retele%20de%20calculatoare/laborator)                                |    4    |
 | [Advanced Object Programming](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Programare%20avansata%20pe%20obiecte)                      |    4    |
 | Advanced Skills in a Foreign Language II         |    2    |
+
+</td></tr></table>

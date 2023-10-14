@@ -1,6 +1,15 @@
 # Year III
 
-### First semester
+<table><tr><th>
+
+[First semester](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201)
+
+</th><th>
+
+[Second semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%202)
+
+</th></tr>
+<tr><td>
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|

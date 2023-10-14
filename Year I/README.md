@@ -1,13 +1,14 @@
 ## Year I
 
 
-<table><tr id="header_row"><th>
+<table><tr><th>
 
 [First semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%201)
 
 </th><th>
 
 [Second semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%202)
+
 </th></tr>
 <tr><td>
 

@@ -1,10 +1,12 @@
 # Computer Science Resources for University of Bucharest Students - 2021-2024 :duck:
 
-Welcome! :slightly_smiling_face: This repository is dedicated to Computer Science students at the University of Bucharest and its goal is to hopefully make other's academic journey a little smoother. Here you can find homework, projects, exams and many other useful resources.
+Welcome! :slightly_smiling_face: 
+
+This repository is dedicated to Computer Science students at the University of Bucharest and its goal is to hopefully make other's academic journey a little smoother. Here you can find homework, projects, exams and many other useful resources.
 
 Feel free to contribute to this repo if you have any suggestions. Happy learning! 🚀📚
 
-Disclaimer: The owner of this repository does not claim intellectual property rights over these resources.
+**Disclaimer:** The owner of this repository does not claim intellectual property rights over these resources.
 
 
 
