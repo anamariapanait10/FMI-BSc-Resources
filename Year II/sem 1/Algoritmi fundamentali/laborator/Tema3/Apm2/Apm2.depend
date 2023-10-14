@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1669339544 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema3\apm2\main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+

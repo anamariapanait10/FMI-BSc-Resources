@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center"> Afisare programari</h2>
+<br />
+@if (ViewBag.Message != null)
+{
+    <h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+
+
+@foreach (PanaitAnaM32.Models.Ticket t in ViewBag.Tickets)
+{
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title alert-success py-3 px-3 rounded-2">@t.TitluBilet</h3>
+            <div class="card-text"><b>Pret: </b>@t.Pret</div>
+            <div class="card-text"><b>Data: </b>@t.Data</div>
+            <div class="card-text"><b>Nume film: </b>@t.Movie.DenFilm</div>
+
+            <br />
+            <a class="btn btn-success d-flex flex-row justify-content-center" href="/Tickets/Show/@t.Id">Afisare bilet</a>
+        </div>
+    </div>
+
+    <br />
+    <br />
+}
+
+

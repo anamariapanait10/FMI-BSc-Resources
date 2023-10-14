@@ -1,0 +1,16 @@
+﻿@model Model_Examen_2.Models.Appointment
+
+
+@foreach (Model_Examen_2.Models.Appointment appt in ViewBag.Appointments)
+{
+    <div class="card">
+
+        appt.Date = appt.Date.ToString().Replace("_", "/");
+        @Html.Partial("AppointmentInfo", appt)
+
+
+    </div>
+
+    <br />
+    <br />
+}

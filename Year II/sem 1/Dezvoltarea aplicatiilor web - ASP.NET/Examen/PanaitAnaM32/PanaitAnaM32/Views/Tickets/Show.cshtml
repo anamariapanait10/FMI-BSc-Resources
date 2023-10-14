@@ -1,0 +1,31 @@
+﻿@model PanaitAnaM32.Models.Ticket
+
+
+<div class="card">
+
+        <div class="card-body">
+
+            <h3 class="card-title alert-success py-3 px-3 rounded-2">@Model.TitluBilet</h3>
+            <div class="card-text"><b>Pret: </b>@Model.Pret</div>
+           <div class="card-text"><b>Data: </b>@Model.Data</div>
+            <div class="card-text"><b>Nume film: </b>@Model.Movie.DenFilm</div>
+
+         <br />
+        <div class="d-flex flex-row justify-content-between">
+
+            <a class="btn btn-success" href="/Tickets/Edit/@Model.Id">Editeaza biletul</a>
+
+            <form method="post" action="/Tickets/Delete/@Model.Id">
+
+                <button class="btn btn-danger" type="submit">Sterge biletul</button>
+
+            </form>
+
+        </div>
+     </div>
+
+
+</div>
+
+<br />
+<br />

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1666728907 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\coursescheduleii\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<iostream>
+	<vector>
+	<algorithm>
+

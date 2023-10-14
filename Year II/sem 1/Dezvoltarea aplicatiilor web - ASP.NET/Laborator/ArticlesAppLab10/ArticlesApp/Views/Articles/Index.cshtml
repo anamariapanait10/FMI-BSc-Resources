@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Afisare articole</h2>
+<br />
+@if(ViewBag.Message != null){
+    <h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+<br />
+
+@foreach (ArticlesApp.Models.Article article in ViewBag.Articles)
+{
+    <div class="card">
+
+        @Html.Partial("ArticleInfo", article )
+      
+
+        <a class="btn btn-success" href="/Articles/Show/@article.Id">Afisare articol</a>
+
+
+        @*
+        * Mai sus se afla varianta in care se utilizeaza helperul @Html.Partial
+        * Mai jos se afla varianta in care se utilizeaza tagul <partial>
+
+        <partial name="ArticleInfo" model="article"></partial> 
+        
+        *@
+
+        
+        @*
+        * Partialul inlocuieste secventa de cod comentata
+        * Secventa a fost mutata in partialul ArticleInfo
+        * Partial care este apelat
+
+        <div class="card-body">
+
+            <h3 class="card-title alert-success py-3 px-3 rounded-2">@article.Title</h3>
+
+            <div class="card-text">@article.Content</div>
+
+            <div class="d-flex justify-content-between flex-row mt-5">
+
+                <div><i class="bi bi-globe"></i> @article.Category.CategoryName</div>
+
+                <a class="btn btn-success" href="/Articles/Show/@article.Id">Afisare articol</a>
+
+                <span class="alert-success">@article.Date</span>
+
+            </div>
+
+        </div>
+
+        *@
+
+    </div>
+
+    <br />
+    <br />
+}
+
+

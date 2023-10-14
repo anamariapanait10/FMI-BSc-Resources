@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="bg-light rounded-3 p-5 mb-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="font-roboto display-5 fw-bold">@Html.Raw(ViewBag.FirstArticle.Title)</h1>
+                    <div class="font-montserrat mb-3 truncate">@Html.Raw(ViewBag.FirstArticle.Content)</div>
+                    <a href="/Articles/Show/@ViewBag.FirstArticle.Id" class="btn btn-outline-success">Vezi articolul</a>
+                </div>
+                <div class="col-md-4">
+                        <img src="https://icon-library.com/images/newspaper-png-icon/newspaper-png-icon-15.jpg" class="img-fluid align-items-center justify-content-center" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row mb-4">
+    @foreach (var article in ViewBag.Articles)
+    {
+        <div class="col-6 row-style">
+            <div class="card">
+                <div class="card-title p-3 text-center bg-dark text-white">
+                    <h4>@Html.Raw(article.Title)</h4>
+                </div>
+
+                <div class="card-body">
+                    <div class="font-montserrat truncate">@Html.Raw(article.Content)</div>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-outline-success" href="/Articles/Show/@article.Id">Vezi Articolul</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

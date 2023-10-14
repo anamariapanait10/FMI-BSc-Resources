@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center"> Afisare programari</h2>
+<br />
+@if (ViewBag.Message != null)
+{
+    <h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+
+
+@foreach (Model_Examen_2.Models.Appointment appointment in ViewBag.Appointments)
+{   
+    @Html.Partial("AppointmentInfo", appointment) 
+
+    <br />
+    <br />
+}
+
+

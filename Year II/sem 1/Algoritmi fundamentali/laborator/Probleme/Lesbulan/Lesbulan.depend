@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1667820892 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\lesbulan\main.cpp
+	<fstream>
+	<iostream>
+	<algorithm>
+	<vector>
+

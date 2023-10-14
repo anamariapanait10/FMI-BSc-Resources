@@ -1,0 +1,8 @@
+#!/bin/bash
+
+./daytime localhost 7000 &
+./daytime localhost 7000 &
+./daytime localhost 7000 &
+./daytime localhost 7000 &
+./daytime localhost 7000 &
+./daytime localhost 7000 &

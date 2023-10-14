@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1673189385 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\johnie\main.cpp
+	<fstream>
+	<algorithm>
+	<vector>
+	<unordered_map>
+

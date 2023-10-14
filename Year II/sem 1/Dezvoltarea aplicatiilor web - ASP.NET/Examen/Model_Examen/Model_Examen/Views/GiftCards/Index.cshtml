@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center"> Afisare carduri</h2>
+<br />
+@if (ViewBag.Message != null)
+{
+        <h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+
+
+<br />
+
+
+
+@foreach (Model_Examen.Models.GiftCard card in ViewBag.Cards)
+{
+        <div class="card">
+             <div class="card-body">
+                  <h3 class="card-title alert-success py-3 px-3 rounded-2">@card.Denumire</h3>
+
+                <div class="card-text">@card.Descriere</div>
+
+                <div class="d-flex justify-content-between flex-row mt-5">
+
+                    <div><i class="bi bi-globe"></i><b>Brand: </b>@card.Brand.Nume</div>
+                    <div class="card-text"><b>Procent: </b>@card.Procent %</div>
+                    <div class="card-text"><b>Data expirare: </b>@card.DataExp</div>
+
+                </div>
+               <br/>
+               <a class="btn btn-success d-flex flex-row justify-content-center" href="/GiftCards/Show/@card.Id">Afisare card</a>
+            </div>
+        </div>
+
+        <br />
+        <br />
+}
+
+

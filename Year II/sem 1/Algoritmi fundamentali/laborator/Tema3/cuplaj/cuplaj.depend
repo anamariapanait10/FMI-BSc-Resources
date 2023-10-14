@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673166579 source:c:\users\ana\desktop\fmi\year ii\sem 1\algoritmi fundamentali\laborator\tema4\cuplaj\main.cpp
+	<fstream>
+	<algorithm>
+	<vector>
+	<queue>
+	<climits>
+

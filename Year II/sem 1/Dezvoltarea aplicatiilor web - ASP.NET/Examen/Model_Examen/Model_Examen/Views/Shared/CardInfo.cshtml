@@ -1,0 +1,30 @@
+﻿<div class="card-body">
+
+    <h3 class="card-title alert-success py-3 px-3 rounded-2">@Model.Denumire</h3>
+
+    <div class="card-text">@Model.Descriere</div>
+
+    <div class="d-flex justify-content-between flex-row mt-5">
+
+        <div><i class="bi bi-globe"></i><b>Brand: </b>@Model.Brand.Nume</div>
+        <div class="card-text"><b>Procent: </b>@Model.Procent %</div>
+        <div class="card-text"><b>Data expirare: </b>@Model.DataExp</div>
+
+    </div>
+    <br />
+    <div class="d-flex flex-row justify-content-between">
+
+        <a class="btn btn-success" href="/GiftCards/Edit/@Model.Id">Editeaza card</a>
+
+        <form method="post" action="/GiftCards/Delete/@Model.Id">
+
+            <button class="btn btn-danger" type="submit">Sterge card</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
