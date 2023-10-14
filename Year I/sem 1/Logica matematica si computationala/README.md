@@ -1,5 +1,5 @@
 ## Professors: 
-curs - Laurentiu Leustean
+course - Laurentiu Leustean \
 seminar - Natalia Gabriela Moanga
 
 ## Site:

@@ -1,3 +1,30 @@
 [submodule "Year II/sem 2/Metode de dezvoltare software/Petbook"]
 	path = Year II/sem 2/Metode de dezvoltare software/Petbook
 	url = https://github.com/anamariapanait10/Petbook
+[submodule "Year I/sem 1/Logica matematica si computationala/examen/Davis-Putnam-algorithm"]
+	path = Year I/sem 1/Logica matematica si computationala/examen/Davis-Putnam-algorithm
+	url = https://github.com/anamariapanait10/Davis-Putnam-algorithm
+[submodule "Year I/sem 1/Arhitectura sistemelor de calcul/Proiect_ASC_2"]
+	path = Year I/sem 1/Arhitectura sistemelor de calcul/Proiect_ASC_2
+	url = https://github.com/anamariapanait10/Proiect_ASC_2
+[submodule "Year I/sem 2/Limbaje formale si automate/laborator/Deterministic-Finite-Automaton-DFA"]
+	path = Year I/sem 2/Limbaje formale si automate/laborator/Deterministic-Finite-Automaton-DFA
+	url = https://github.com/anamariapanait10/Deterministic-Finite-Automaton-DFA
+[submodule "Year II/sem 1/Sisteme de operare/proiect/Disk-Analyzer"]
+	path = Year II/sem 1/Sisteme de operare/proiect/Disk-Analyzer
+	url = https://github.com/anamariapanait10/Disk-Analyzer
+[submodule "Year I/sem 1/Arhitectura sistemelor de calcul/proiecte/Proiect_ASC_2"]
+	path = Year I/sem 1/Arhitectura sistemelor de calcul/proiecte/Proiect_ASC_2
+	url = https://github.com/anamariapanait10/Proiect_ASC_2
+[submodule "Year II/sem 2/Retele de calculatoare/proiecte/proiect-retele-2023-dag"]
+	path = Year II/sem 2/Retele de calculatoare/proiecte/proiect-retele-2023-dag
+	url = https://github.com/curs-retele-2023/proiect-retele-2023-dag
+[submodule "Year II/sem 2/Retele de calculatoare/proiecte/Server-HTTP"]
+	path = Year II/sem 2/Retele de calculatoare/proiecte/Server-HTTP
+	url = https://github.com/TgeorgeT/Server-HTTP
+[submodule "Year I/sem 2/Structuri de date/proiecte/Stack-with-two-queues"]
+	path = Year I/sem 2/Structuri de date/proiecte/Stack-with-two-queues
+	url = https://github.com/anamariapanait10/Stack-with-two-queues
+[submodule "Year I/sem 2/Structuri de date/proiecte/Sorting-project"]
+	path = Year I/sem 2/Structuri de date/proiecte/Sorting-project
+	url = https://github.com/anamariapanait10/Sorting-project

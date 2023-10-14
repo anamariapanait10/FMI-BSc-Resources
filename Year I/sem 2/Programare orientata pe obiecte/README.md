@@ -1,5 +1,5 @@
 ## Professors:
-course & laboratory - Dobrovat Anca
+course & laboratory - Dobrovat Anca \
 seminar - Cheptea D
 
 ## Useful links:
