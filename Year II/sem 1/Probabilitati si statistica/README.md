@@ -1,3 +1,3 @@
 ## Professor: 
-course - Cristian Niculescu
+course - Cristian Niculescu \
 laboratory - Evgnosia Alexandra Kelesidis

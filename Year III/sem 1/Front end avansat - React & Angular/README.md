@@ -1,3 +1,3 @@
 ## Professors:
-- Liviu
-- 
+- Liviu Nicu
+- Dorneanu Eduard

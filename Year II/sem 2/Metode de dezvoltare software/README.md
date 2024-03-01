@@ -1,6 +1,6 @@
 ## Professors:
 
-Course: Alin Stefanescu
+Course: Alin Stefanescu \
 Laboratory: Andrei George Nicolaescu
 
 ## Project:

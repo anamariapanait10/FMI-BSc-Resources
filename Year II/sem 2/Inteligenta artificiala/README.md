@@ -1,4 +1,4 @@
 ## Professors:
 
-Course: Radu Ionescu
+Course: Radu Ionescu \
 Laboratory: Vlad Hondru

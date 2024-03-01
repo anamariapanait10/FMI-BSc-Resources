@@ -1,6 +1,6 @@
 ## Professors:
 
-Course: Radu Boriga
+Course: Radu Boriga \
 Laboratory: Nicolae Marius Ghergu
 
 ## Project:

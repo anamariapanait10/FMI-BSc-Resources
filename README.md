@@ -1,18 +1,25 @@
-# Computer Science Resources for University of Bucharest Students - 2021-2024 :duck:
+# Computer Science Resources for University of Bucharest Students - 2021-2024
 
-Welcome! :slightly_smiling_face: 
+Welcome! 🦆
 
-This repository is dedicated to Computer Science students at the University of Bucharest and its goal is to hopefully make other's academic journey a little smoother. Here you can find homework, projects, exams and many other useful resources.
-
-Feel free to contribute to this repo if you have any suggestions. Happy learning! 🚀📚
+This repository is dedicated to Computer Science students at the University of Bucharest. Here you can find homework, projects, exams and many other useful resources.
 
 **Disclaimer:** The owner of this repository does not claim intellectual property rights over these resources.
 
 
 
-## [First year 2021-2022](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I)
+## [Year I - 2021-2022](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I)
 
-#### First semester
+<table><tr><th>
+
+[First semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%201)
+
+</th><th>
+
+[Second semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%202)
+
+</th></tr>
+<tr><td>
 
 | Discipline                                           | Credits |
 |------------------------------------------------------|---------|
@@ -25,7 +32,7 @@ Feel free to contribute to this repo if you have any suggestions. Happy learning
 | [Basic Skills in a Foreign Language](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%201/Engleza)                   |    2    |
 | Physical Education                                   |    2    |
 
-#### Second semester
+</td><td>
 
 | Discipline                                           | Credits |
 |------------------------------------------------------|---------|
@@ -39,9 +46,20 @@ Feel free to contribute to this repo if you have any suggestions. Happy learning
 | Physical Education *                                 |    2    |
 | [3D Printing and Modeling *](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%202/Printare%20si%20Modelare%203D)                           |    2    |
 
-## [Second year 2022-2023](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II)
+</td></tr></table>
 
-#### First semester
+## [Year II - 2022-2023](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II)
+
+<table><tr><th>
+
+[First semester](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20II/sem%201)
+
+</th><th>
+
+[Second semester](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20II/sem%202)
+
+</th></tr>
+<tr><td>
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -53,7 +71,7 @@ Feel free to contribute to this repo if you have any suggestions. Happy learning
 | [Optional Web Application Development - ASP .NET](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%201/Dezvoltarea%20aplicatiilor%20web%20-%20ASP.NET)  |    5    |
 | [Advanced Skills in a Foreign Language I](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%201/Competente%20avansate%20intr-o%20limba%20straina%20I)          |    2    |
 
-#### Second semester
+</td><td>
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
@@ -61,30 +79,45 @@ Feel free to contribute to this repo if you have any suggestions. Happy learning
 | [Advanced Algorithms](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Algoritmi%20avansati)                              |    5    |
 | [Fundamentals of Programming Languages](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Fundamentele%20limbajelor%20de%20programare)           |    5    |
 | [Software Development Methods](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Metode%20de%20dezvoltare%20software)                     |    5    |
-| [Computer Networks](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Retele%20de%20calculatoare/laborator)                                |    4    |
+| [Computer Networks](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Retele%20de%20calculatoare)                                |    4    |
 | [Advanced Object Programming](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20II/sem%202/Programare%20avansata%20pe%20obiecte)                      |    4    |
 | Advanced Skills in a Foreign Language II         |    2    |
 
-## [Third year 2023-2024](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20III)
+</td></tr></table>
 
-#### First semester
+## [Year III - 2023-2024](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20III)
+
+<table><tr><th>
+
+[First semester](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201)
+
+</th><th>
+
+[Second semester](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20I/sem%202)
+
+</th></tr>
+<tr><td>
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
-| [Computability and complexity]()                     |    5    |
-| [Security of computer systems]()                     |    5    |
+| [Computability and complexity](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201/Calculabilitate%20si%20complexitate)                     |    5    |
+| [Security of computer systems](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201/Securitatea%20sistemelor%20informatice)                     |    5    |
 | [Software engineering](https://github.com/anamariapanait10/FMI-materials/tree/master/Year%20III/sem%201/Inginerie%20software)                             |    5    |
-| [Advanced Front End: React and Angular]()            |    5    |
-| [Introduction to Reinforcement Learning]()           |    5    |
-| [Introduction to robotics]()                         |    5    |
+| [Advanced Front End: React and Angular](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201/Front%20end%20avansat%20-%20React%20%26%20Angular)            |    5    |
+| [Introduction to Reinforcement Learning](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201/Introducere%20in%20Reinforcement%20Learning)           |    5    |
+| [Introduction to robotics](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%201/Introducere%20in%20robotica)                         |    5    |
 
-#### Second semester
+</td><td>
+
+### Second semester
 
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
-| [Cryptographic Protocols]()                          |    4    |
-| [Programming Applications in NodeJs]()               |    4    |
-| [Introduction to Natural Language Processing]()      |    4    |
-| [Security Elements and Applied Logic]()              |    4    |
+| [Cryptographic Protocols](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%202/Protocoale%20criptografice)                          |    4    |
+| [Programming Applications in NodeJs](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%202/Programarea%20aplicatiilor%20in%20NodeJs)               |    4    |
+| [Introduction to Natural Language Processing](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%202/Introducere%20in%20prelucrearea%20limbajului%20natural)      |    4    |
+| [Security Elements and Applied Logic](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%202/Elemente%20de%20securitate%20si%20logica%20aplicata)              |    4    |
 | [Completion of the Bachelor's Thesis]()              |    7    |
 | Practice in Industry                             |    7    |
+
+</td></tr></table>

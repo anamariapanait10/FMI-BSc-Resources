@@ -1,6 +1,6 @@
 ## Professors:
 
-Course: Sergiu Nisioi
+Course: Sergiu Nisioi \
 Laboratory: Vlad Olaru
 
 ## Projects:

@@ -1,3 +1,3 @@
 ## Professor:
-course - Radu Boriga
+course - Radu Boriga \
 laboratory - Matei A
