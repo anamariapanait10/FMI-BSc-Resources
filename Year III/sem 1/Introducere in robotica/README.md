@@ -1,3 +1,3 @@
 ## Professor:
-course - Andrei Dumitriu
+course - Andrei Dumitriu \
 laboratory - Vlad Toader
