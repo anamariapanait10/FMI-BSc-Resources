@@ -22,8 +22,6 @@
 
 </td><td>
 
-### Second semester
-
 | Discipline                                       | Credits |
 |--------------------------------------------------|---------|
 | [Cryptographic Protocols](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/sem%202/Protocoale%20criptografice)                          |    4    |
@@ -34,3 +32,6 @@
 | Practice in Industry                             |    7    |
 
 </td></tr></table>
+
+
+If you want my opinion about the optional courses I took, you can check [this](https://github.com/anamariapanait10/FMI-materials-bachelor/tree/master/Year%20III/PareriOptionale.docx).
