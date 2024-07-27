@@ -1,3 +1,3 @@
 ## Professor:
-- Dinu L \
-- Zavelca M
+- Dinu Liviu
+- Zavelca Miruna

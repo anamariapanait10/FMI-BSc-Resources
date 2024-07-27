@@ -1,3 +1,3 @@
 ## Professors:
-- Dorneanu Eduard \
+- Dorneanu Eduard
 - Stavarache Vlad

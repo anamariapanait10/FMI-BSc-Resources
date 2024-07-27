@@ -1,5 +1,5 @@
 ## Professors:
-- Prunescu Mihai \
-- Dragan / Vasile \
-- Leustean Laurentiu \
+- Prunescu Mihai 
+- Dragan / Vasile
+- Leustean Laurentiu
 - Olimid Ruxandra
